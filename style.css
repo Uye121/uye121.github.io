@@ -1,0 +1,30 @@
+.navbar {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 5px;
+	border-radius: 0;
+	margin-bottom: 0;
+	font-size: 12px;
+	letter-spacing: 2px;
+}
+.navbar-nav li a:hover {
+	color: 	#ffcc00 !important;
+}
+.bg-1 { 
+	background-color: 	#336699; /* Green */
+	color: #ffffff;
+}
+.bg-2 {
+	background-color: #00ccff;
+	color: 	#00ff99;
+
+}
+.bg-3 {
+	background-color: #ccffff;
+	color: #ff9900;
+}
+.container-fluid {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+			
