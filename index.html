@@ -10,13 +10,13 @@
     <body>
         <nav>
             <ul>
-                <li><a href="#" class="nav-modal" onclick="toggleTab('about')">About</a></li>
-                <li><a href="#" class="nav-modal" onclick="toggleTab('projects')">Projects</a></li>
-                <li><a href="#" class="nav-modal" onclick="toggleTab('experience')">Experiene</a></li>
-                <li><a href="#" class="nav-modal" onclick="toggleTab('involvement')">Involvement</a></li>
+                <li><a href="#" class="nav" onclick="toggleTab('about')">About</a></li>
+                <li><a href="#" class="nav" onclick="toggleTab('projects')">Projects</a></li>
+                <li><a href="#" class="nav" onclick="toggleTab('experience')">Experiene</a></li>
+                <li><a href="#" class="nav" onclick="toggleTab('involvement')">Involvement</a></li>
             </ul>
         </nav>
-        <div class="modal" id="about">
+        <div class="nav-modal" id="about">
             <div class="image-cropper"><img src="/Images/portrait.png" id="personal-image" alt="Ulric's portrait"></div>
             <h1>Ulric Ye</h1>
             <h3>2015-2019 University of California, San Diego</h3>
@@ -28,8 +28,13 @@
                 discoveries and technological innovations.
             </p>
         </div>
-        <div class="modal" id="projects">
-            <div id="web">
+        <div class="nav-modal" id="projects">
+            <div class="grid-container">
+                <img src="./Images/Clostat_logo.png" alt="Clostat Logo">
+                <img src="./Images/Markit_logo.png" alt="Markit Logo">
+            </div>
+            <!-- contents within the grid -->
+            <div style="display: none">
                 <section>
                     <figure>
                         <img src="./Images/Clostat_logo.png" alt="Clostat Logo">
@@ -91,13 +96,14 @@
                     </article>
                 </section>
             </div>
+            <!-- End of web -->
             <div id="mobile">
 
             </div>
         </div>
-        <div class="modal" id="experience">
+        <div class="nav-modal" id="experience">
         </div>
-        <div class="modal" id="involvement">
+        <div class="nav-modal" id="involvement">
         </div>
     </body>
 </html>
