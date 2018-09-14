@@ -50,6 +50,7 @@ article {
 h1 {
     font-size: 3em;
     margin-top: 0;
+    margin: 0 20px 0 0;
 }
 
 h3 {
@@ -79,4 +80,38 @@ article img {
 
 .grid-container > img {
     width: 100%;
+}
+
+.modal {
+    padding-top: 20px;
+}
+
+#about {
+    text-align: center;
+    padding-top: 50px;
+}
+
+#projects {
+    display: none;
+}
+
+#experience {
+    display: none;
+}
+
+#involvement {
+    display: none;
+}
+
+#personal-image {
+    height: 100%;
+    width: auto;
+}
+
+.image-cropper {
+    width: 95px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 }
