@@ -32,15 +32,9 @@ li a:hover {
     background-color: gray;
 }
 
-section {
-    display: grid;
-    grid-template-columns: 25% auto;
-}
-
-figure {
-    background: #BBE2ED;
-    margin: 0;
+.nav-modal > h1 {
     text-align: center;
+
 }
 
 article {
@@ -62,13 +56,6 @@ p {
     line-height: 2em;
 }
 
-figure > img {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 60px;
-    max-width: 200px;
-}
-
 article img {
     max-height: 600px;
 }
@@ -76,16 +63,45 @@ article img {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 10px;
-    padding: 10px;
+    grid-gap: 5px;
+    padding: 15px;
 }
 
-.grid-container > img {
+.thumbnail {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    background-color: white;
+    border: solid 2px black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-portrait {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+        /* -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%); */
+}
+
+.icon-landscape {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: auto;
     width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+        /* -ms-transform: translate(-50%, -50%);
+            transform: translate(-50, -50%); */
 }
 
 .nav-modal {
-    padding-top: 20px;
+    padding-top: 60px;
 }
 
 #about {
@@ -116,4 +132,30 @@ article img {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
+}
+
+.modal-content {
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.web-proj {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    background-color: white;
+}
+
+article span {
+    color: gray;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+article span:hover {
+    color: black;
+    cursor: pointer;
 }
