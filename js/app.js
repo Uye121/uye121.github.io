@@ -1,18 +1,6 @@
-window.onload = function() {
-    let span = document.getElementsByClassName("close");
-    let webProj = document.getElementsByClassName("web-proj");
-    let thumbnail = document.getElementsByClassName("thumbnail");
-
-    for(let i=0; i<thumbnail.length; i++) {
-        thumbnail[i].onclick = function() {
-            showModal(this.childNodes[0].id);
-        }
-    }
-}
-
-window.onclick = function(event) {
-    let modal = document.getElementsByClassName("web-proj");
-
+function openModal(projNum) {
+    let proj = document.getElementsByClassName("web-proj");
+    proj[projNum].style.display = "block";
 }
 
 function closeModal(projNum) {

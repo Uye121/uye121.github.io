@@ -137,10 +137,10 @@ article img {
 .modal-content {
     position: absolute;
     top: 0;
-    display: none;
 }
 
 .web-proj {
+    display: none;
     position: relative;
     margin: auto;
     padding: 0;
