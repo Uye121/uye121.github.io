@@ -12,33 +12,38 @@
             <ul>
                 <li><a href="#" class="nav" onclick="toggleTab('about')">About</a></li>
                 <li><a href="#" class="nav" onclick="toggleTab('projects')">Projects</a></li>
-                <li><a href="#" class="nav" onclick="toggleTab('experience')">Experiene</a></li>
-                <li><a href="#" class="nav" onclick="toggleTab('involvement')">Involvement</a></li>
+                <li><a href="#" class="nav" onclick="toggleTab('resume')">Résumé</a></li>
             </ul>
         </nav>
         <div class="nav-modal" id="about">
             <div class="image-cropper"><img src="/Images/portrait.png" id="personal-image" alt="Ulric's portrait"></div>
             <h1>Ulric Ye</h1>
             <h3>2015-2019 University of California, San Diego</h3>
-            <h4>Major: B.S. Cognitive Science with Specialization<br> in<br> Human-Computer Interaction</h4>
+            <h4>Bachelor of Science: Cognitive Science with Specialization<br> in<br> Human-Computer Interaction</h4>
             <h4>Minor: Computer Science</h4>
             <p>
                 I am an avid Virtual Reality developer and a Data Science hobbyist. In my free time, I like to
-                work on projects, use data sets to find trends to answer my questions, and read about scientific
-                discoveries and technological innovations.
+                work on projects, look at trends in data sets, and read about scientific discoveries and 
+                technological innovations.
             </p>
         </div>
         <div class="nav-modal" id="projects">
             <h1>Web Projects</h1>
             <div class="grid-container">
-                <div class="thumbnail"><img src="./Images/Clostat_logo.png" onclick="openModal(0)" class="icon-portrait" alt="Clostat Logo"></div>
-                <div class="thumbnail"><img src="./Images/Markit_logo.png" onclick="openModal(1)" class="icon-landscape" alt="Markit Logo"></div>
+                <div class="thumbnail" onclick="openModal(0)"><img src="./Images/Clostat_logo.png" class="icon-portrait" alt="Clostat Logo"></div>
+                <div class="thumbnail" onclick="openModal(1)"><img src="./Images/Markit_logo.png" class="icon-landscape" alt="Markit Logo"></div>
+            </div>
+            <br><br>
+            <h1>Mobile Projects</h1>
+            <div class="grid-container">
+                <div class="thumbnail" onclick="openModal(2)"><img src="./Images/wya_logo.png" class="icon-portrait" alt="AppName homescreen"></div>
             </div>
             <div class="modal-content">
-                <section class="web-proj">
+                <section class="proj">
                     <article>
                         <span onclick="closeModal(0)">&times;</span>
                         <h1>CloStat</h1>
+                        <a href="https://github.com/Uye121/CloStat">Github Repository</a>
                         <p>
                             CloStat provides users with clothing recommendations based on the up-to-date weather information. It is a 
                             virtual closet that let the user keeps track of the status of clothing (clean or worn) to allow a more
@@ -61,10 +66,11 @@
                         </p>
                     </article>
                 </section>
-                <section class="web-proj">
+                <section class="proj">
                     <article>
                         <span onclick="closeModal(1)">&times;</span>
                         <h1>Markit</h1>
+                        <a href="https://github.com/Uye121/Markit">Github Repository</a><br>
                         <a href="https://docs.google.com/spreadsheets/d/1XJ_6hCmvGXxNleRh7i4zCY_Ec3BZIqn87z5jCZqiA_U/edit?usp=sharing">Development Plan</a>
                         <p>
                             Markit allow users to scan barcodes to compare the user reviews on store products to make a wiser
@@ -91,14 +97,27 @@
                         </p>
                     </article>
                 </section>
-            </div>
-            <div id="mobile">
-
+                <section class="proj">
+                    <article>
+                        <span onclick="closeModal(2)">&times;</span>
+                        <h1>WhereYouAt(WYA)</h1>
+                        <a href="https://github.com/dys3/App">Github Repository</a>
+                        <p>
+                            WYA helps people coordinate while trying to meet up for an event. Like other event apps, it allows the user to
+                            make an event and invite others. What sets it apart from other event app is that it lets people see where the
+                            other event attendees are at if they chose to show their location. This feature enables attendees to guide one
+                            another to the event in the case that they get lost or canno find one another.
+                        </p>
+                        <h3>Wireframe</h3>
+                        <img src="./Images/wya_wireframe1.png" alt="wya wireframe 1">
+                        <img src="./Images/wya_wireframe2.png" alt="wya wireframe 2">
+                        <img src="./Images/wya_wireframe3.png" alt="wya wireframe 3">
+                    </article>
+                </section>
             </div>
         </div>
-        <div class="nav-modal" id="experience">
-        </div>
-        <div class="nav-modal" id="involvement">
+        <div class="nav-modal" id="resume">
+            <embed src="./Files/UlricYe_Resume.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0" width="816px" height="1056px">
         </div>
     </body>
 </html>

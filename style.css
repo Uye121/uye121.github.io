@@ -4,7 +4,9 @@ body, html {
 }
 
 body {
-    background: #D8F7FF;
+    background: #2bc0e4; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2bc0e4, #eaecc6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2bc0e4, #eaecc6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 ul {
@@ -14,11 +16,15 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: darkgray;
+    background-color: #80DBF0; opacity:0.6;
+    border: 2px solid #52CDEA;
+    z-index: 10;
 }
 
 li {
     float: left;
+    padding: 0 25px;
+    font-size: 20px;
 }
 
 li a {
@@ -29,7 +35,7 @@ li a {
 }
 
 li a:hover {
-    background-color: gray;
+    background-color: #06B3DC;
 }
 
 .nav-modal > h1 {
@@ -38,7 +44,7 @@ li a:hover {
 }
 
 article {
-    padding: 2em;
+    padding: 3em 2em;
 }
 
 h1 {
@@ -61,10 +67,11 @@ article img {
 }
 
 .grid-container {
-    display: grid;
+    display: inline-grid;
     grid-template-columns: auto auto;
-    grid-gap: 5px;
+    grid-gap: 25px;
     padding: 15px;
+    border: 0 auto;
 }
 
 .thumbnail {
@@ -74,8 +81,12 @@ article img {
     overflow: hidden;
     background-color: white;
     border: solid 2px black;
-    margin-left: auto;
-    margin-right: auto;
+    maring: 0 45px;
+}
+
+.thumbnail:hover {
+    opacity: 60%;
+    cursor: pointer;
 }
 
 .icon-portrait {
@@ -85,8 +96,8 @@ article img {
     height: 100%;
     width: auto;
     -webkit-transform: translate(-50%,-50%);
-        /* -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%); */
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
 }
 
 .icon-landscape {
@@ -96,8 +107,8 @@ article img {
     height: auto;
     width: 100%;
     -webkit-transform: translate(-50%, -50%);
-        /* -ms-transform: translate(-50%, -50%);
-            transform: translate(-50, -50%); */
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50, -50%);
 }
 
 .nav-modal {
@@ -106,22 +117,14 @@ article img {
 
 #about {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 70px;
 }
 
 #about p {
     margin: 0 50px;
 }
 
-#projects {
-    display: none;
-}
-
-#experience {
-    display: none;
-}
-
-#involvement {
+#projects, #resume {
     display: none;
 }
 
@@ -136,17 +139,16 @@ article img {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .modal-content {
     position: absolute;
     top: 0;
-    text-align: center;
+    text-align: left;
 }
 
-.web-proj {
+.proj {
     display: none;
     position: relative;
     margin: auto;
@@ -165,4 +167,9 @@ article span {
 article span:hover {
     color: black;
     cursor: pointer;
+}
+
+#resume {
+    width: 816px;
+    margin: 0 auto;
 }
