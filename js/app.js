@@ -1,4 +1,5 @@
 window.onclick = function(event) {
+    console.log(event.target);
     let proj = document.getElementsByClassName("proj");
     let projBackground = document.getElementById("projBackground");
     let navBar = document.getElementsByClassName('nav-modal')[1];
@@ -11,8 +12,13 @@ window.onclick = function(event) {
         }
     }
 
-    projBackground.onclick = function() {
-        console.log("gone");
+    projBackground.onclick = function(event) {
+        for(let i=0; i<proj.length; i++) {
+            let pStyle = window.getComputedStyle(proj[i]);
+            if(pStyle.getPropertyValue('display') == "block") {
+                console.log("gone");
+            }
+        }
     }
 }
 
@@ -29,6 +35,10 @@ window.onload = function() {
             this.style.cursor = "default";
             event.stopPropagation();
         });
+        thumbnails[i].addEventListener('click', function(event) {
+            event.stopPropagation();
+            openModal(i);
+        })
     }
 }
 
