@@ -89,11 +89,6 @@ article img {
     margin: 0 45px;
 }
 
-.thumbnail:hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
-
 .icon-portrait {
     position: absolute;
     left: 50%;
@@ -147,10 +142,12 @@ article img {
     margin: 0 auto;
 }
 
-.modal-content {
+#modal-content {
     position: absolute;
     top: 0;
     text-align: left;
+    width: 80%;
+    left: 10vw;
 }
 
 .proj {
@@ -178,4 +175,9 @@ span:hover {
 #resume {
     width: 816px;
     margin: 0 auto;
+}
+
+#projBackground {
+    opacity: 1;
+    cursor: default;
 }

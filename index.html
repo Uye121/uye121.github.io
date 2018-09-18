@@ -18,27 +18,34 @@
         <div class="nav-modal" id="about">
             <div class="image-cropper"><img src="/Images/portrait.png" id="personal-image" alt="Ulric's portrait"></div>
             <h1>Ulric Ye</h1>
-            <h3>2015-2019 University of California, San Diego</h3>
+            <h3>University of California, San Diego '19</h3>
             <h4>Bachelor of Science: Cognitive Science with Specialization<br> in<br> Human-Computer Interaction</h4>
             <h4>Minor: Computer Science</h4>
             <p>
-                I am an avid Virtual Reality developer and a Data Science hobbyist. In my free time, I like to
+                I am an aspire Front-end developer, an avid Virtual Reality developer, and a Data Science hobbyist. In my free time, I like to
                 work on projects, look at trends in data sets, and read about scientific discoveries and 
                 technological innovations.
             </p>
         </div>
         <div class="nav-modal" id="projects">
-            <h1>Web Projects</h1>
-            <div class="grid-container">
-                <div class="thumbnail" onclick="openModal(0)"><img src="./Images/Clostat_logo.png" class="icon-portrait" alt="Clostat Logo"></div>
-                <div class="thumbnail" onclick="openModal(1)"><img src="./Images/Markit_logo.png" class="icon-landscape" alt="Markit Logo"></div>
+            <div id="projBackground">
+                <h1>Web Projects</h1>
+                <div class="grid-container">
+                    <div class="thumbnail" onclick="openModal(0)"><img src="./Images/Clostat_logo.png" class="icon-portrait" alt="Clostat Logo"></div>
+                    <div class="thumbnail" onclick="openModal(1)"><img src="./Images/Markit_logo.png" class="icon-landscape" alt="Markit Logo"></div>
+                </div>
+                <br><br>
+                <h1>Mobile Projects</h1>
+                <div class="grid-container">
+                    <div class="thumbnail" onclick="openModal(2)"><img src="./Images/wya_logo.png" class="icon-portrait" alt="AppName homescreen"></div>
+                </div>
+                <br><br>
+                <h1>Virtual Reality Projects</h1>
+                <div class="grid-container">
+                    <div class="thumbnail" onclick="openModal(3)"><img src="./Images/aMaze_screenshot.png" class="icon-landscape" alt="aMaze image"></div>
+                </div>
             </div>
-            <br><br>
-            <h1>Mobile Projects</h1>
-            <div class="grid-container">
-                <div class="thumbnail" onclick="openModal(2)"><img src="./Images/wya_logo.png" class="icon-portrait" alt="AppName homescreen"></div>
-            </div>
-            <div class="modal-content">
+            <div id="modal-content">
                 <section class="proj">
                     <span onclick="closeModal(0)">&times;</span>
                     <h2>CloStat</h2>
@@ -112,6 +119,20 @@
                         <img src="./Images/wya_wireframe1.png" alt="wya wireframe 1">
                         <img src="./Images/wya_wireframe2.png" alt="wya wireframe 2">
                         <img src="./Images/wya_wireframe3.png" alt="wya wireframe 3">
+                    </article>
+                </section>
+                <section class="proj">
+                    <span onclick="closeModal(3)">&times;</span>
+                    <h2>aMaze</h2>
+                    <article>
+                        <a href="https://github.com/nicholascrow/aMaze">Github Repository</a>
+                        <a href="https://devpost.com/software/amaze-lhwti7">Devpost</a><br><br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/q7eltsTDSzU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <p>
+                            aMaze is a horror theme action survival game built for the Vive during SD Hacks 2017. Players have to travel 
+                            through the maze filled with programmed mob monsters, interactible items and weapons, and fog. Everything in-game,
+                            from 3D models to scenes, is custom-made using Unity and Blender.
+                        </p>
                     </article>
                 </section>
             </div>
