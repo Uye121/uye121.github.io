@@ -1,8 +1,8 @@
 window.onclick = function(event) {
-    console.log(event.target);
     let proj = document.getElementsByClassName("proj");
     let projBackground = document.getElementById("projBackground");
     let navBar = document.getElementsByClassName('nav-modal')[1];
+    let mContent = document.getElementById("modal-content");
     let navBarStyle = window.getComputedStyle(navBar);
     for(let i=0; i<proj.length; i++) {
         let pStyle = window.getComputedStyle(proj[i]);
@@ -15,9 +15,20 @@ window.onclick = function(event) {
     projBackground.onclick = function(event) {
         for(let i=0; i<proj.length; i++) {
             let pStyle = window.getComputedStyle(proj[i]);
-            if(pStyle.getPropertyValue('display') == "block") {
-                console.log("gone");
+            if(pStyle.getPropertyValue('display')  == "block") {
+                closeModal(i);
             }
+        }
+    }
+    mContent.onclick = function(event) {
+        event.stopPropagation();
+        if(event.target == mContent) {
+            let i=0;
+            mContent.childNodes.forEach((node) => {
+                if(node.tagName) {
+                    closeModal(i++);
+                }
+            })
         }
     }
 }
