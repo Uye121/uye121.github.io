@@ -12,7 +12,7 @@ window.onclick = function(event) {
         }
     }
 
-    projBackground.onclick = function(event) {
+    projBackground.onclick = function() {
         for(let i=0; i<proj.length; i++) {
             let pStyle = window.getComputedStyle(proj[i]);
             if(pStyle.getPropertyValue('display')  == "block") {
@@ -58,7 +58,27 @@ function openModal(projNum) {
     let proj = document.getElementsByClassName("proj");
     let projBackground = document.getElementById("projBackground");
     let compStyle = window.getComputedStyle(projBackground);
+    let mContent = document.getElementById("modal-content");
+    let mcStyle = window.getComputedStyle(mContent);
+    // console.log("modal content height: ", mcStyle.getPropertyValue("height"));
+    console.log("modal content height: ", mContent.scrollHeight);
+
+    proj[3].childNodes.forEach(node => {
+        if(node.tagName) {
+            let nodeStyle = window.getComputedStyle(node);
+        }
+    });
+
     if(compStyle.getPropertyValue('opacity') == "1") {
+        let pStyle = window.getComputedStyle(proj[projNum]);
+        let backHeight = parseInt(compStyle.getPropertyValue('height'));
+        console.log(proj[projNum].offsetHeight);
+        if(parseInt(pStyle.getPropertyValue('height')) < backHeight) {
+            proj[projNum].setAttribute('style', `height: ${backHeight}px`);
+            console.log(proj[projNum]);
+            console.log("changing height to ", backHeight);
+            // proj[projNum].style.height = backHeight;
+        }
         proj[projNum].style.display = "block";
         projBackground.style.opacity = 0.5;
         scrollToTop(1);
@@ -80,6 +100,7 @@ function closeModal(projNum) {
     let projBackground = document.getElementById("projBackground");
     proj[projNum].style.display = "none";
     projBackground.style.opacity = 1;
+    projBackground.setAttribute("height", "");
 }
 
 // Toggle between the nav bar pages

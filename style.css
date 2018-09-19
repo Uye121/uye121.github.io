@@ -192,4 +192,5 @@ span:hover {
 #projBackground {
     opacity: 1;
     cursor: default;
+    text-align: center;
 }
