@@ -58,29 +58,18 @@ function openModal(projNum) {
     let proj = document.getElementsByClassName("proj");
     let projBackground = document.getElementById("projBackground");
     let compStyle = window.getComputedStyle(projBackground);
-    let mContent = document.getElementById("modal-content");
-    let mcStyle = window.getComputedStyle(mContent);
-    // console.log("modal content height: ", mcStyle.getPropertyValue("height"));
-    console.log("modal content height: ", mContent.scrollHeight);
-
-    proj[3].childNodes.forEach(node => {
-        if(node.tagName) {
-            let nodeStyle = window.getComputedStyle(node);
-        }
-    });
 
     if(compStyle.getPropertyValue('opacity') == "1") {
-        let pStyle = window.getComputedStyle(proj[projNum]);
-        let backHeight = parseInt(compStyle.getPropertyValue('height'));
-        console.log(proj[projNum].offsetHeight);
-        if(parseInt(pStyle.getPropertyValue('height')) < backHeight) {
-            proj[projNum].setAttribute('style', `height: ${backHeight}px`);
-            console.log(proj[projNum]);
-            console.log("changing height to ", backHeight);
-            // proj[projNum].style.height = backHeight;
-        }
         proj[projNum].style.display = "block";
         projBackground.style.opacity = 0.5;
+        let pStyle = window.getComputedStyle(proj[projNum]);
+        let backHeight = parseInt(compStyle.getPropertyValue('height'));
+        if(parseInt(pStyle.getPropertyValue('height')) < backHeight) {
+            let navBar = document.getElementsByClassName('nav-modal')[0];
+            let navBarStyle = window.getComputedStyle(navBar);
+            backHeight += parseInt(navBarStyle.getPropertyValue('padding-top'));
+            proj[projNum].style.height = `${backHeight}px`;
+        }
         scrollToTop(1);
     }
 }
