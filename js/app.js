@@ -54,7 +54,6 @@ window.onload = function() {
 }
 
 function openModal(projNum) {
-    console.log("open modal");
     let proj = document.getElementsByClassName("proj");
     let projBackground = document.getElementById("projBackground");
     let compStyle = window.getComputedStyle(projBackground);
@@ -97,7 +96,7 @@ function closeModal(projNum) {
 // Toggle between the nav bar pages
 function toggleTab(section) {
     let navmodal = document.getElementsByClassName("nav-modal");
-    console.log(navmodal);
+    let nav = document.getElementsByClassName("nav");
     let index;
     switch(section) {
         case "about":
@@ -111,9 +110,14 @@ function toggleTab(section) {
         break;
     }
     for(let i=0; i<navmodal.length; i++) {
-        if(i != index) navmodal[i].style.display = "none";
+        if(i != index) {
+            navmodal[i].style.display = "none";
+            nav[i].classList.remove("active");
+        } else {
+            nav[i].classList.add("active");
+        }
+
     }
-    console.log(navmodal[index]);
     navmodal[index].style.display = "block";
 }
 
