@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Ulric Ye</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://www.youtube.com/iframe_api"></script>
         <script src="js/app.js"></script>
     </head>
     <body>
         <nav>
             <ul>
-                <li><a href="#" class="nav" onclick="toggleTab('about')">About</a></li>
+                <li><a href="#" class="nav active" onclick="toggleTab('about')">About</a></li>
                 <li><a href="#" class="nav" onclick="toggleTab('projects')">Projects</a></li>
                 <li><a href="#" class="nav" onclick="toggleTab('resume')">Résumé</a></li>
             </ul>
@@ -127,7 +128,7 @@
                     <article>
                         <a href="https://github.com/nicholascrow/aMaze">Github Repository</a>
                         <a href="https://devpost.com/software/amaze-lhwti7">Devpost</a><br><br>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/q7eltsTDSzU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/q7eltsTDSzU?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         <p>
                             aMaze is a horror theme action survival game built for the Vive during SD Hacks 2017. Players have to travel 
                             through the maze filled with programmed mob monsters, interactible items and weapons, and fog. Everything in-game,
