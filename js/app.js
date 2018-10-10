@@ -28,7 +28,7 @@ window.onclick = function(event) {
                 if(node.tagName) {
                     closeModal(i++);
                 }
-            })
+            });
         }
     }
 }
@@ -49,7 +49,7 @@ window.onload = function() {
         thumbnails[i].addEventListener('click', function(event) {
             event.stopPropagation();
             openModal(i);
-        })
+        });
     }
 }
 
@@ -105,12 +105,16 @@ function toggleTab(section) {
         case "projects":
         index = 1;
         break;
-        case "resume":
+        case "skills":
         index = 2;
+        break;
+        case "resume":
+        index = 3;
         break;
     }
     for(let i=0; i<navmodal.length; i++) {
         if(i != index) {
+            console.log(navmodal[i]);
             navmodal[i].style.display = "none";
             nav[i].classList.remove("active");
         } else {
@@ -119,21 +123,4 @@ function toggleTab(section) {
 
     }
     navmodal[index].style.display = "block";
-}
-
-function showModal(proj) {
-    let project = document.getElementsByClassName("proj");
-    let mContent = document.getElementById("modal-content");
-    mContent.style.display = "block";
-    switch(proj) {
-        case "Clostat":
-        project[0].style.display = "block";
-        break;
-        case "Markit":
-        project[1].style.display = "block";
-        break;
-        case "AppName":
-        project[2].style.display = "block";
-        break;
-    }
 }

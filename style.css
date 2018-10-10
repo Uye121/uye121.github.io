@@ -58,6 +58,10 @@ h2 {
     padding: 65px 0 0 32px;
 }
 
+#about > h2 {
+    padding: 20px 0 0 0;
+}
+
 h3 {
     font-size: 1.5em;
     margin-top: 0;
@@ -128,7 +132,7 @@ article img {
     margin: 0 50px;
 }
 
-#projects, #resume {
+#projects, #resume, #skills {
     display: none;
 }
 
@@ -185,4 +189,19 @@ span:hover {
     opacity: 1;
     cursor: default;
     text-align: center;
+}
+
+#col {
+    text-align: center;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+#skills > h1 {
+    padding-top: 15px;
+}
+
+#col > h2 {
+    padding-top: 25x;
 }
