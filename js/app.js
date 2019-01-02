@@ -124,7 +124,6 @@ function toggleTab(section) {
     }
     for(let i=0; i<navmodal.length; i++) {
         if(i != index) {
-            console.log(navmodal[i]);
             navmodal[i].style.display = "none";
             nav[i].classList.remove("active");
         } else {
