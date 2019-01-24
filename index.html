@@ -6,6 +6,18 @@
         <title>Ulric Ye</title>
         <link rel="stylesheet" href="style.css">
         <script src="js/app.js"></script>
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                color: white;
+            }
+
+            body {
+                background-image: url("./Images/network_background.jpg");
+                background-size: cover;
+            }
+        </style>
         <script>
             // Check that service workers are registered
             if ('serviceWorker' in navigator) {
@@ -28,8 +40,11 @@
         <div class="nav-modal" id="about">
             <div class="image-cropper"><img src="/Images/portrait.png" id="personal-image" alt="Ulric's portrait"></div>
             <h1>Ulric Ye</h1>
-            <br><br><br>
-            <h3>Web Developer &nbsp;&nbsp;&nbsp; Virtual Reality Developer &nbsp;&nbsp;&nbsp; iOS Developer</h3>
+            <div class="typewriter">
+                <h3>Web Developer</h3>
+                <h3>Product Designer</h3> 
+                <h3>iOS Developer</h3>
+            </div>
         </div>
         <div class="nav-modal" id="projects">
             <div id="projBackground">
