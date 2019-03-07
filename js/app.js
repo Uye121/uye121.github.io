@@ -5,7 +5,7 @@ window.onload = function() {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/sw.js');
         });
-      }
+    }
 }
 
 window.onclick = function(event) {
@@ -47,7 +47,7 @@ window.onload = function() {
     let thumbnails = document.getElementsByClassName("thumbnail");
     for(let i=0; i<thumbnails.length; i++) {
         thumbnails[i].addEventListener('mouseover', function(event) {
-            this.style.opacity = 0.6;
+            this.style.opacity = 0.9;
             this.style.cursor = "pointer";
             event.stopPropagation();
         });
