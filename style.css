@@ -338,18 +338,26 @@ span:hover {
     padding-top: 25px;
 }
 
-figure img {
+figure {
+    display: table;
+    text-align: center;
+    font-size: smaller;
+    text-indent: 0;
+    margin: 0.5rem;
+    padding: 0.5rem;
     max-width: 30%;
 }
 
-figure {
-    display: table;
+figure img {
+    max-width: 80%;
 }
 
 figcaption {
-    display: table-caption;
+    text-align: center;
+    margin: auto;
 }
 
+/* thumbnail overlay */
 .overlay {
     position: absolute;
     bottom: 100%;
