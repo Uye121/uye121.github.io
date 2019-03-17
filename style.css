@@ -357,6 +357,10 @@ figcaption {
     margin: auto;
 }
 
+.img_border img {
+    border: 1px solid black;
+}
+
 /* thumbnail overlay */
 .overlay {
     position: absolute;
