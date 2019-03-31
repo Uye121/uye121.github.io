@@ -96,8 +96,8 @@ function scrollToTop(scrollDuration) {
 function closeModal(projNum) {
     let proj = document.getElementsByClassName("proj");
     let projBackground = document.getElementById("projBackground");
-    let ytVid = document.getElementsByClassName("youtube-video");
-    ytVid[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+    // let ytVid = document.getElementsByClassName("youtube-video");
+    // ytVid[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
     proj[projNum].style.display = "none";
     projBackground.style.opacity = 1;
     projBackground.setAttribute("height", "");
