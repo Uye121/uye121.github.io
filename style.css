@@ -1,4 +1,4 @@
-ul {
+nav > ul {
     position: fixed;
     width: 100%;
     list-style-type: none;
@@ -9,20 +9,20 @@ ul {
     z-index: 10;
 }
 
-li {
+nav > ul > li {
     float: left;
     font-size: 1.4em;
     width: 7em;
 }
 
-li a {
+nav > ul > li a {
     display: block;
     padding: 1em 0em;
     text-align: center;
     text-decoration: none;
 }
 
-li a:hover {
+nav > ul > li a:hover {
     background-color: #06B3DC;
 }
 
@@ -208,12 +208,12 @@ article img {
 
 .thumbnail {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 15.625rem;
+    height: 15.625rem;
     overflow: hidden;
     background-color: white;
     border: solid 2px black;
-    margin: 1.2rem;
+    margin: 3rem;
     border-radius: 50%;
 }
 
