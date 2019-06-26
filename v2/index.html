@@ -1,21 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="./style.css">
-        <title>Ulric Ye</title>
-    </head>
-    <body>
-        <nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="index.js"></script>
+    <title>Ulric Ye</title>
+</head>
+<body>
+    <nav class="nav-wrapper">
+        <div class="burger-icon"><i class="fas fa-bars"></i> MENU</div>
+        <ul class="nav-items main-nav mobile-hide">
+            <li><a href="#" class="nav active" onclick="toggleTab('about')">About</a></li>
+            <li><a href="#" class="nav" onclick="toggleTab('projects')">Projects</a></li>
+            <li><a href="#" class="nav" onclick="toggleTab('skills')">Skills</a></li>
+            <li><a href="#" class="nav" onclick="toggleTab('resume')">Résumé</a></li>
+        </ul>
+    </nav>
+    <section class="home">
+        <h1>Ulric Ye</h1>
+        <h3>UX Designer & Front-end Web Developer</h3>
+    </section>
+    <section class="about">
+        <h1>About</h1>
+        <p>I am a Cognitive Science Human-Computer Interaction (HCI) graduate from the University of California, San Diego with a minor in Computer Science.</p>
+    </section>
+    <section class="projects">
+        <h1>Projects</h1>
+        <div class="hackxr project-cell">
+            <img src="../Images/hackxr_prev.png">
+            <div class=overlay>
+                <div class=overlay-content>
+                    <h2>HackXR 2019</h2>
+                    <p>
+                        HackXR 2019 is a responsive static website built for HackXR, UC San Diego's 36 hours virtual and mixed reality Hackathon.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sase project-cell">
+            <img src="../Images/sase_prev.png">
+            <div class=overlay>
+                <div class=overlay-content>
+                    <h2>SASE Website Redesign</h2>
+                    <p>
+                        The website redesign provided an aesthetically pleasing and cleaner look that conveys the organization's goals. 
+                    </p>
+                </div>
+            </div>  
+        </div>
+        <div class="tritonxr project-cell">
+            <img src="../Images/txr_prev.png">
+            <div class=overlay>
+                <div class=overlay-content>
+                    <h2>Triton XR Website</h2>
+                    <p>
+                        Triton XR website aimed to inform users about the organization and its purpose. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tritoned project-cell">
+            <img src="../Images/ted_prev.png">
+            <div class=overlay>
+                <div class=overlay-content>
+                    <h2>TritonEd Website Redesign</h2>
+                    <p>
+                        TritonEd was UC San Diego's learning management system. Its redesign was aimed to address its usability errors and give it a clean and organized design.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="clostat project-cell">
+            <img src="../Images/clostat_prev.png">
+            <div class=overlay>
+                <div class=overlay-content>
+                    <h2>Clostat</h2>
+                    <p>
+                        Clostat is a mobile web app that give users clothing recommendations based on the weather, the clothes' number of wearage, and users' clean clothes. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="markit project-cell">
+            <img src="../Images/markit_prev.png">
+            <div class=overlay>
+                <div class=overlay-content>
+                    <h2>MarkIt</h2>
+                    <p>
+                        MarkIt is a mobile web app that let user compare grocery store items to make the best purchase option.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills">
+        <h1>Skills</h1>
+        <div class="programming">
+            <h2>Programming Languages</h2>
             <ul>
-                <li><a href="#" class="nav active" onclick="toggleTab('about')">About</a></li>
-                <li><a href="#" class="nav" onclick="toggleTab('projects')">Projects</a></li>
-                <li><a href="#" class="nav" onclick="toggleTab('skills')">Skills</a></li>
-                <li><a href="#" class="nav" onclick="toggleTab('resume')">Résumé</a></li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>HTML/CSS</li>
+                <li>Swift</li>
+                <li>Sass</li>
+                <li>C/C++</li>
+                <li>Python</li>
             </ul>
-        </nav>
-        <img src="../Images/background.jpg" alt="background image">
-    </body>
+            <h2>Libraries & Framework</h2>
+            <ul>
+                <li>Node</li>
+                <li>jQuery</li>
+                <li>Bootstrap</li>
+                <li>React</li>
+            </ul>
+            <h2>Softwares</h2>
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Xcode</li>
+                <li>Sketch</li>
+                <li>Adobe XD</li>
+                <li>Figma</li>
+            </ul>
+            <h2>Design</h2>
+            <ul>
+                <li>Prototype & Wireframe</li>
+                <li>Information Architecture</li>
+                <li>User Research & User Testing</li>
+                <li>Competitive Analysis</li>
+                <li>A/B Testing</li>
+                <li>Interaction Design</li>
+            </ul>
+        </div>
+    </section>
+    <!-- <section class="resume">
+        <h1>Résumé</h1>
+        <embed src="../Files/UlricYe_Resume.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0" width="816" height="1056">
+    </section> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</body>
 </html>

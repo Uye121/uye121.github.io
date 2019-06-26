@@ -1,5 +1,5 @@
 window.onload = function() {
-    console.log("window loaded");
+    console.log("window loaded!");
     if ('serviceWorker' in navigator) {
         // Use the window load event to keep the page load performant
         window.addEventListener('load', () => {
