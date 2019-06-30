@@ -1,9 +1,45 @@
 body {
   text-align: center;
 }
+/*** NAVBAR ***/
+.nav-wrapper {
+  position: relative;
+  padding-top: 20px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: 30% auto;
+}
+nav ul {
+  padding: 0;
+  width: 100%;
+}
 nav ul li {
-  display: inline;
+  display: block;
   list-style-type: none;
+  padding: 10px 0;
+}
+nav a {
+  text-decoration: none;
+  letter-spacing: .1em;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+.nav-items {
+  grid-column: 1/5;
+  text-align: center;
+  position: absolute;
+}
+.burger-icon {
+  float: right;
+  display: inline-block;
+  justify-self: end;
+  grid-column: 4/5;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  position: absolute;
 }
 .mobile-show {
   display: block;
@@ -11,24 +47,35 @@ nav ul li {
 .mobile-hide {
   display: none;
 }
-.projects {
+/*** HOME ***/
+/* Parallax */
+.home {
+  background-image: url("../Images/mobile_background.png");
+  max-height: 568px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 568px;
+  color: white;
+}
+/*** PROJECT ***/
+.projects_wrapper {
   max-width: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: auto;
-  grid-gap: 20px;
-  background-color: pink;
+  grid-gap: 10px;
 }
-.project-cell {
-  background-color: aqua;
+figure {
   grid-column-start: 1;
   grid-column-end: 3;
-  margin: 20px 0;
+  margin: 10px 0;
   position: relative;
   text-align: center;
 }
-.project-cell img {
-  width: 100%;
+figure img {
+  width: 80%;
   max-width: 300px;
 }
 .overlay {
@@ -37,7 +84,7 @@ nav ul li {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 80%;
   height: 100%;
   background-color: rgba(0,0,0,0.4);
   color: white;
@@ -46,20 +93,27 @@ nav ul li {
   animation-name: fadeIn;
   animation-duration: 0.4s;
   z-index: 1;
+  text-align: center;
+  vertical-align: middle;
 }
-.overlay h2 {
-  font-size: 1.14rem; /* 14sp = 1rem */
-}
-.overlay-content {
+.overlay h2 { font-size: 6vw; }
+.overlay h3 { font-size: 4.5vw; }
+.overlay p { font-size: 3.5vw; }
+figcaption {
   position: fixed;
-  bottom: 0; /* change to auto but need to fix animation */
+  width: 100%;
+  bottom: 0px; /* change to auto but need to fix animation */
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.4s;
   animation-name: slideIn;
   animation-duration: 0.4s
 }
+/*** CONTACT ***/
+input {
+  margin: 10px 0;
+}
 
-/*** Animations ***/
+/* Animations */
 @-webkit-keyframes slideIn {
   from {bottom: -300px; opacity: 0} 
   to {bottom: 0; opacity: 1}

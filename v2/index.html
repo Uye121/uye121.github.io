@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <script src="index.js"></script>
-    <title>Ulric Ye</title>
+    <title>Ulric Ye | Front-End & UX Developer</title>
 </head>
 <body>
-    <nav class="nav-wrapper">
-        <div class="burger-icon"><i class="fas fa-bars"></i> MENU</div>
-        <ul class="nav-items main-nav mobile-hide">
-            <li><a href="#" class="nav active" onclick="toggleTab('about')">About</a></li>
-            <li><a href="#" class="nav" onclick="toggleTab('projects')">Projects</a></li>
-            <li><a href="#" class="nav" onclick="toggleTab('skills')">Skills</a></li>
-            <li><a href="#" class="nav" onclick="toggleTab('resume')">Résumé</a></li>
-        </ul>
-    </nav>
     <section class="home">
-        <h1>Ulric Ye</h1>
-        <h3>UX Designer & Front-end Web Developer</h3>
+        <nav class="nav-wrapper">
+            <!-- <div class="burger-icon"><i class="fas fa-bars"></i></div> -->
+            <ul class="nav-items main-nav mobile-hide">
+                <li><a href="about" class="nav active" onclick="toggleTab('about')">About</a></li>
+                <li><a href="projects" class="nav" onclick="toggleTab('projects')">Projects</a></li>
+                <li><a href="resume" class="nav" onclick="toggleTab('resume')">Résumé</a></li>
+                <li><a href="contact" class="nav" onclick="toggleTab('contact')">Contact</a></li>
+            </ul>
+        </nav>
+            <h1>Ulric Ye</h1>
+            <h3>UX Designer & Front-end Web Developer</h3>
     </section>
     <section class="about">
         <h1>About</h1>
@@ -28,74 +28,99 @@
     </section>
     <section class="projects">
         <h1>Projects</h1>
-        <div class="hackxr project-cell">
-            <img src="../Images/hackxr_prev.png">
-            <div class=overlay>
-                <div class=overlay-content>
-                    <h2>HackXR 2019</h2>
-                    <p>
-                        HackXR 2019 is a responsive static website built for HackXR, UC San Diego's 36 hours virtual and mixed reality Hackathon.
-                    </p>
+        <div class=projects_wrapper>
+            <figure>
+                <img src="../Images/hackxr_prev.png">
+                <div class=overlay>
+                    <figcaption>
+                        <h2>HackXR 2019</h2>
+                        <span>
+                            <h3>Front End Developer & Designer</h3>
+                        </span>
+                        <p>
+                            HackXR 2019 is a responsive static website built for HackXR, UC San Diego's 36 hours virtual and mixed reality Hackathon.
+                        </p>
+                    </figcaption>
                 </div>
-            </div>
-        </div>
-        <div class="sase project-cell">
-            <img src="../Images/sase_prev.png">
-            <div class=overlay>
-                <div class=overlay-content>
-                    <h2>SASE Website Redesign</h2>
-                    <p>
-                        The website redesign provided an aesthetically pleasing and cleaner look that conveys the organization's goals. 
-                    </p>
+            </figure>
+
+            <figure>
+                <img src="../Images/sase_prev.png">
+                <div class=overlay>
+                    <figcaption>
+                        <h2>SASE Website Redesign</h2>
+                        <span>
+                            <h3>UX Designer</h3>
+                        </span>
+                        <p>
+                            The website redesign provided an aesthetically pleasing and cleaner look that conveys the organization's goals. 
+                        </p>
+                    </figcaption>
+                </div>  
+            </figure>
+
+            <figure>
+                <img src="../Images/txr_prev.png">
+                <div class=overlay>
+                    <figcaption>
+                        <h2>Triton XR Website</h2>
+                        <span>
+                            <h3>Web Developer & Designer</h3>
+                        </span>
+                        <p>
+                            Triton XR website aimed to inform users about the organization and its purpose. 
+                        </p>
+                    </figcaption>
                 </div>
-            </div>  
-        </div>
-        <div class="tritonxr project-cell">
-            <img src="../Images/txr_prev.png">
-            <div class=overlay>
-                <div class=overlay-content>
-                    <h2>Triton XR Website</h2>
-                    <p>
-                        Triton XR website aimed to inform users about the organization and its purpose. 
-                    </p>
+            </figure>
+
+            <figure>
+                <img src="../Images/ted_prev.png">
+                <div class=overlay>
+                    <figcaption>
+                        <h2>TritonEd Website Redesign</h2>
+                        <span>
+                            <h3>UX/UI Designer</h3>
+                        </span>
+                        <p>
+                            TritonEd was UC San Diego's learning management system. Its redesign was aimed to address its usability errors and give it a clean and organized design.
+                        </p>
+                    </figcaption>
                 </div>
-            </div>
-        </div>
-        <div class="tritoned project-cell">
-            <img src="../Images/ted_prev.png">
-            <div class=overlay>
-                <div class=overlay-content>
-                    <h2>TritonEd Website Redesign</h2>
-                    <p>
-                        TritonEd was UC San Diego's learning management system. Its redesign was aimed to address its usability errors and give it a clean and organized design.
-                    </p>
+            </figure>
+
+            <figure>
+                <img src="../Images/clostat_prev.png">
+                <div class=overlay>
+                    <figcaption>
+                        <h2>Clostat</h2>
+                        <span>
+                            <h3>Front End Developer</h3>
+                        </span>
+                        <p>
+                            Clostat is a mobile web app that give users clothing recommendations based on the weather, the clothes' number of wearage, and users' clean clothes. 
+                        </p>
+                    </figcaption>
                 </div>
-            </div>
-        </div>
-        <div class="clostat project-cell">
-            <img src="../Images/clostat_prev.png">
-            <div class=overlay>
-                <div class=overlay-content>
-                    <h2>Clostat</h2>
-                    <p>
-                        Clostat is a mobile web app that give users clothing recommendations based on the weather, the clothes' number of wearage, and users' clean clothes. 
-                    </p>
+            </figure>
+
+            <figure>
+                <img src="../Images/markit_prev.png">
+                <div class=overlay>
+                    <figcaption>
+                        <h2>MarkIt</h2>
+                        <span>
+                            <h3>Front End Developer & Designer</h3>
+                        </span>
+                        <p>
+                            MarkIt is a mobile web app that let user compare grocery store items to make the best purchase option.
+                        </p>
+                    </figcaption>
                 </div>
-            </div>
-        </div>
-        <div class="markit project-cell">
-            <img src="../Images/markit_prev.png">
-            <div class=overlay>
-                <div class=overlay-content>
-                    <h2>MarkIt</h2>
-                    <p>
-                        MarkIt is a mobile web app that let user compare grocery store items to make the best purchase option.
-                    </p>
-                </div>
-            </div>
+            </figure>
         </div>
     </section>
-    <section class="skills">
+    <!-- <section class="skills">
         <h1>Skills</h1>
         <div class="programming">
             <h2>Programming Languages</h2>
@@ -133,11 +158,21 @@
                 <li>Interaction Design</li>
             </ul>
         </div>
-    </section>
+    </section> -->
     <!-- <section class="resume">
         <h1>Résumé</h1>
         <embed src="../Files/UlricYe_Resume.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0" width="816" height="1056">
     </section> -->
+    <footer class="contact">
+        <h2>Contact</h2>
+        <form action="mailto:uye@ucsd.edu" method="POST" enctype="text/plain">
+            <input required type="text" name="name" id="name" placeholder="Name">
+            <input required type="text" name="email" id="email" placeholder="Email">
+            <input required type="text" name="subject" id="subject" placeholder="Subject">
+            <textarea required name="message" placeholder="Message"></textarea><br>
+            <input type="submit" name="submit" id="submit" value="submit">
+        </form>
+    </footer>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </body>
