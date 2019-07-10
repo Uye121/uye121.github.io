@@ -13,22 +13,22 @@ window.onload = function(event) {
     }
   }
 
-  menuButton[0].addEventListener("click", () => {
-    let mainNav = document.getElementsByClassName("main-nav")[0];
-    let burgerIcon = document.getElementsByClassName("burger-icon")[0];
-    let navWrapper = document.getElementsByClassName("nav-wrapper")[0];
-		if(mainNav.classList.contains("mobile-hide")) {
-			mainNav.classList.remove("mobile-hide");
-      mainNav.classList.add("mobile-show");
-      burgerIcon.style.color = "black";
-      // mainNav.style.opacity = 1.0;
-		} else {
-			mainNav.classList.add("mobile-hide");
-      mainNav.classList.remove("mobile-show");
-      burgerIcon.style.color = "white";
-      // mainNav.style.opacity = 0.0;
-		}
-  });
+  // menuButton[0].addEventListener("click", () => {
+  //   let mainNav = document.getElementsByClassName("main-nav")[0];
+  //   let burgerIcon = document.getElementsByClassName("burger-icon")[0];
+  //   let navWrapper = document.getElementsByClassName("nav-wrapper")[0];
+	// 	if(mainNav.classList.contains("mobile-hide")) {
+	// 		mainNav.classList.remove("mobile-hide");
+  //     mainNav.classList.add("mobile-show");
+  //     burgerIcon.style.color = "black";
+  //     // mainNav.style.opacity = 1.0;
+	// 	} else {
+	// 		mainNav.classList.add("mobile-hide");
+  //     mainNav.classList.remove("mobile-show");
+  //     burgerIcon.style.color = "white";
+  //     // mainNav.style.opacity = 0.0;
+	// 	}
+  // });
 }
 
 // Broken; it activates right after modalOn becomes true
