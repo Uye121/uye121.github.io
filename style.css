@@ -1,343 +1,66 @@
-nav > ul {
-    position: fixed;
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #80DBF0; opacity:0.90;
-    z-index: 10;
+html {
+    scroll-behavior: smooth;
 }
-
-nav > ul > li {
-    float: left;
-    font-size: 1.4em;
-    width: 7em;
+body {
+    font-family: 'Playfair Display', serif;
 }
-
-nav > ul > li a {
-    display: block;
-    padding: 1em 0em;
-    text-align: center;
-    text-decoration: none;
+article .subheading strong, article a {
+    font-size: 1.8rem;
 }
-
-nav > ul > li a:hover {
-    background-color: #06B3DC;
-}
-
-.nav-modal > h1 {
-    text-align: center;
-
-}
-
-article {
-    padding: 0 3em 2em 3em;
-}
-
-h1 {
-    font-size: 3em;
-}
-
-h2 {
-    font-size: 2.5em;
-    margin: 0;
-    padding: 2em 0 0 1.1em;
-}
-
-/* typewriter animation */
-.typewriter h3 {
-    border-right: .15em solid gray;
-    font-family: "Courier";
-    font-size: 1.5em;
-    white-space: nowrap;
-    overflow: hidden;
-    margin: auto;
-}
-
-.typewriter h3:nth-child(1) {
-    width: 8em;
-    -webkit-animation: type 2s steps(40, end);
-    animation: type 2s steps(40, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-
-.typewriter h3:nth-child(2) {
-    width: 6em;
-    opacity: 0;
-    -webkit-animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
-    animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-
-.typewriter h3:nth-child(3) {
-    width: 8em;
-    opacity: 0;
-    -webkit-animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
-    animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
-    -webkit-animation-delay: 4s;
-    animation-delay: 4s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-
-@keyframes type {
-    0% {
-      width: 0;
-    }
-    99.9% {
-      border-right: .15em solid gray;
-    }
-    100% {
-      border: none;
-    }
-}
-  
-@-webkit-keyframes type {
-    0% {
-        width: 0;
-    }
-    99.9% {
-        border-right: .15em solid gray;
-    }
-    100% {
-        border: none;
-    }
-}
-  
-@keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      border-right: .15em solid gray;
-    }
-    100% {
-      opacity: 1;
-      /* border: none; */
-    }
-}
-  
-@-webkit-keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      border-right: .15em solid gray;
-    }
-    100% {
-      opacity: 1;
-      /* border: none; */
-    }
-}
-  
-@keyframes type3 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-}
-  
-@-webkit-keyframes type3 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-}
-  
-@keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-}
-
-@-webkit-keyframes blink {
-    50% {
-      border-color: tranparent;
-    }
-}
-
-#about > h3 {
-    margin-bottom: 10px;
-}
-
-h3 {
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
-p {
-    line-height: 1em;
-}
-
 article img {
-    max-height: 600px;
+    max-width: 50%;
 }
-
-.flexbox {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+article p strong {
+    font-size: 3rem;
+}
+figure {
+    padding: 10px 0;
+}
+figure img {
+    border: 2px solid gray;
+}
+form {
+    width: 50%;
+    border-radius: 8px;
+    background-color: #6f6f6f;
+    padding: 20px;
+    margin: 20px auto;
+}
+.form-group input[type=text], textarea {
+    width: 100%;
+    margin: 0 auto;
+}
+.form-group {
+    margin-left: 0;
+}
+.form_submit {
+    text-align: center;
+}
+.modal-content {
+    padding: 0 10px;
+}
+.modal-content h3, .modal-content h4 {
+    font-family: 'Titillium Web', sans-serif;
+}
+.navbar-nav {
+    float:none;
+    margin: 0 auto;
     display: flex;
-
-    flex-flow: row wrap;
-    margin: auto;
     justify-content: space-around;
 }
-
-.thumbnail {
-    position: relative;
-    width: 15.625rem;
-    height: 15.625rem;
-    overflow: hidden;
-    background-color: white;
-    border: solid 2px black;
-    margin: 3rem;
-    border-radius: 50%;
-}
-
-.flex {
-    display: flex;
-}
-
-.icon-portrait {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: 100%;
-    width: auto;
-    -webkit-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-}
-
-.icon-landscape {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    height: auto;
-    width: 100%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-}
-
-.nav-modal {
-    padding-top: 60px;
-}
-
-.active {
-    background-color: #06B3DC;
-    color: white;
-}
-
-#about {
+.header {
     text-align: center;
-    padding-top: 70px;
+    padding: 20px 0;
+    font-size: 4.5rem;
+    font-weight: 800;
 }
-
-#about p {
-    margin: 0 50px;
+.modal-body img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
-
-#projects, #resume, #skills {
-    display: none;
-}
-
-#personal-image {
-    height: 100%;
-    width: auto;
-}
-
-.image-cropper {
-    width: 95px;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-top: 100px;
-}
-
-#modal-content {
-    position: absolute;
-    top: 0;
-    text-align: left;
-    width: 80%;
-    left: 10vw;
-}
-
-.proj {
-    display: none;
-    position: relative;
-    margin: auto;
-    padding: 0;
-    width: 90%;
-    background-color: white;
-    color: black;
-}
-
-span {
-    color: gray;
-    float: right;
-    font-size: 30px;
-    font-weight: bold;
-    padding: 65px 32px 0 0;
-}
-
-span:hover {
-    color: black;
-    cursor: pointer;
-}
-
-#resume {
-    width: 816px;
-    margin: 0 auto;
-}
-
-#projBackground {
-    opacity: 1;
-    cursor: default;
-    text-align: center;
-}
-
-.col {
-    text-align: center;
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-}
-
-#skills > h1 {
-    padding-top: 15px;
-}
-
-.col > h2 {
-    padding-top: 25px;
-}
-
-figure {
+.portraitFig figure {
     display: table;
     text-align: center;
     font-size: smaller;
@@ -346,47 +69,68 @@ figure {
     padding: 0.5rem;
     max-width: 30%;
 }
-
-figure img {
+.landscapeFig figure img {
     max-width: 80%;
 }
-
-figcaption {
+.modal-dialog {
+    width: 80%;
+}
+.modal-content h3 {
+    padding-left: 15px;
     text-align: center;
+    font-weight: 800;
+    font-size: 3rem;
+}
+.modal-content .close {
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 35px;
+    opacity: .35;
+}
+.projectCell {
+    padding-bottom: 30px;
+}
+.landscapeFig {
+    text-align: center;
+}
+.portraitFig {
+    display: flex;
+    flex-flow: row wrap;
     margin: auto;
+    justify-content: space-around;
 }
-
-.img_border img {
-    border: 1px solid black;
+#about .container-fluid {
+    padding: 0;
+    margin: 0;
 }
-
-/* thumbnail overlay */
-.overlay {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    background-color: rgba(60,88,102,0.8);
-    overflow: hidden;
+#about .background-img {
+    height: 120vh;
     width: 100%;
-    height: 0;
-    transition: 0.5s ease;
-    radius: 50%;
+    background: url("./Images/desktop_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
 }
-
-.thumbnail:hover .overlay {
-    bottom: 0;
-    height: 100%;
+#about {
+    color:	#e6e6d8be;
 }
-
-.overlay h3 {
-    white-space: nowrap; 
-    color: white;
-    font-size: 20px;
+#about h1 {
     position: absolute;
-    overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+}
+#about h2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#projects .row {
+    margin: 0;
+}
+#resume {
+    text-align: center;
 }

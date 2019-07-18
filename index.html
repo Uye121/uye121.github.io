@@ -3,22 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ulric Ye</title>
+		<meta property="og:title" content="Ulric Ye | Portfolio">
+		<meta property="og:description" content="Ulric Ye's Web Portfolio">
+		<meta property="og:keywords" content="Web Developer,UX Designer, Front-End Development,Web Development,Web Design, Technology">
+        <title>Ulric Ye | Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
-        <script src="js/app.js"></script>
-        <style>
-            body, html {
-                height: 100%;
-                margin: 0;
-                color: white;
-            }
-
-            body {
-                background-image: url("./Images/network_background.jpg");
-                background-size: cover;
-            }
-        </style>
-        <script>
+        <!-- <script>
             // Check that service workers are registered
             if ('serviceWorker' in navigator) {
                 // Use the window load event to keep the page load performant
@@ -26,452 +19,534 @@
                     navigator.serviceWorker.register('/sw.js');
                 });
             }
+        </script> -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144127658-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-144127658-1');
         </script>
     </head>
     <body>
         <noscript>JavaScript is needed to run this page.</noscript>
-        <nav>
-            <ul>
-                <li><a href="#" class="nav active" onclick="toggleTab('about')">About</a></li>
-                <li><a href="#" class="nav" onclick="toggleTab('projects')">Projects</a></li>
-                <li><a href="#" class="nav" onclick="toggleTab('skills')">Skills</a></li>
-                <li><a href="#" class="nav" onclick="toggleTab('resume')">Résumé</a></li>
-            </ul>
-        </nav>
-        <div class="nav-modal" id="about">
-            <div class="image-cropper"><img src="/Images/portrait.png" id="personal-image" alt="Ulric's portrait"></div>
-            <h1>Ulric Ye</h1>
-            <div class="typewriter">
-                <h3>Web Developer</h3>
-                <h3>& Designer</h3>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-nav-demo">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#resume">Résumé</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="nav-modal" id="projects">
-            <div id="projBackground">
-                <h1>Projects</h1>
-                <div class="flexbox">
-                    <div class="thumbnail flex">
-                        <img src="./Images/hackxr_hexlogo.png" class="icon-portrait" alt="HackXR Hexagon Logo">
-                        <div class="overlay">
+        </nav>
+        <section id="about">
+            <div class="background-img"></div>
+            <h1>Ulric Ye</h1>
+            <h2>Web Developer & Designer</h2>
+        </section>
+        <section id="projects">
+            <h3 class="header">Projects</h3>
+            <div class="row">
+                <!-- HackXR -->
+                <div class="col-lg-4 col-sm-6 projectCell">
+                    <button type="button" class="btn btn-primary thumbnail" data-toggle="modal" data-target="#hackxr">
+                        <img src="./Images/hackxr_prev.png" alt="HackXR Logo">
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="hackxr" tabindex="-1" role="dialog" aria-labelledby="hackxr" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button><br>
                             <h3>HackXR 2019</h3>
+                            <div class="modal-body">
+                                <article>
+                                    <a href="https://github.com/TritonXR/hackXRsite">Github Repository</a>
+                                    <p class="subheading"><strong>Technologies used:</strong> Bootstrap, jQuery</p>
+                                    <p class="subheading"><strong>Languages used:</strong> HTML, CSS, JavaScript</p>
+                                    <p>
+                                        <strong>Overview</strong><br>HackXR 2019 is a responsive static website built using Bootstrap for HackXR, Triton XR's 36 hours Extended Reality Hackathon. The website was built with the purpose of informing
+                                        and updating visitors about the event, as well as links to register and to sign up as volunteer. I collaborated with Triton XR's Branding Committee and went through several iterations 
+                                        of redesign using Adobe XD, while asking feedbacks from colleagues, friends, and working professionals in the industry.
+                                    </p>
+                                    <p>
+                                        The layout of the site itself was built using Bootstrap, HTML, and CSS. The interactions and features was created using JavaScript and jQuery.
+                                    </p>
+                                    <p>
+                                        <strong>Challenge</strong><br>I did not know how to deploy the website as there was no documentation to help me, and the previous Triton XR web team did not remember how they deploy the website. I spent a lot
+                                        of time looking up Github pages and custom domains before I figured out how to deploy the website using a custom domain. Another challenge I faced is that I only had few weeks to get website up 
+                                        because I need to get the website up before we advertise the hackathon so that people can find out more about the event. The last challenge I faced was deciding whether to use Bootstrap or not. For 
+                                        an event website of this scale, bootstrap would not impede the site's performance much, and bootstrap is built for mobile-first design. However, bootstrap websites are very generic and promotes messy 
+                                        markup as it encourages the use of classes and divs rather than some of the HTML tags. I chose to use bootstrap to help with the implementation as I did not have the time to make a truly responsive
+                                        website with the time given.
+                                    </p>
+                                    <div class="landscapeFig">
+                                        <figure>
+                                            <img src="./Images/hackxr_home.png" alt="HackXR home section">
+                                            <figcaption>HackXR's landing page</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="./Images/hackxr_about.png" alt="HackXR about section">
+                                            <figcaption>This section of the page informs user what the hackathon is about and what Virtual, Augmented, and Extended Reality is.</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="./Images/hackxr_schedule_faq.png" alt="HackXR schedule and FAQ section">
+                                            <figcaption>This section will display the HackXR schedule once it is finalized, and the FAQ section provides user with answers to frequently asked questions.</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="./Images/hackxr_sponsor.png" alt="HackXR sponsor section">
+                                            <figcaption>This section contains all of the current sponsors and partners for HackXR and will be updated as more sponsors and partners are finalized.</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="./Images/hackxr_contact.png" alt="HackXR contact section">
+                                            <figcaption>This section contains icons for the relevant resources for the hackathon.</figcaption>
+                                        </figure>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                    <div class="thumbnail flex">
-                        <img src="./Images/sase_logo.png" class="icon-landscape" alt="SASE Logo">
-                        <div class="overlay">
-                            <h3>SASE Website Redesign</h3>
+                </div>
+                <!-- SASE Website Redesign -->
+                <div class="col-lg-4 col-sm-6 projectCell">
+                    <button type="button" class="btn btn-primary thumbnail" data-toggle="modal" data-target="#sase">
+                        <img src="./Images/sase_prev.png" alt="HackXR Logo">
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="sase" tabindex="-1" role="dialog" aria-labelledby="sase" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button><br>
+                                <h3>SASE Website Redesign</h3>
+                                <div class="modal-body">
+                                    <article>
+                                        <a href="https://www.figma.com/proto/vEWMaH9VcdBPBvVAdreFdh/COGS187B-Mobile-Prototype-Final?node-id=0%3A1&viewport=257%2C226%2C0.157939&scaling=scale-down">Interactive Prototype (Mobile)</a><br>
+                                        <a href="https://www.figma.com/proto/XMuxuuNwiDRJAKhkd0xniP/COGS187B-Desktop-Prototype-Final?node-id=0%3A1&viewport=463%2C299%2C0.106126&scaling=scale-down">Interactive Prototype (Desktop)</a>
+                                        <p class="subheading"><strong>Technologies used:</strong> Figma</p>
+                                        <p>
+                                            <strong>Overview</strong><br>Society of Asian Scientists and Engineers (SASE) at UCSD is part of a national organization founded in 2003 in East Coast to add diversity. SASE at UCSD won awards almost every year and is very strong on the outside.Their current biggest event is Dining with Professionals (DWP), where they invite companies from San Diego area to come dine with UC San Diego students and talk about their work.
+                                        </p>
+                                        <p>
+                                            <strong>Goal</strong><br>The main focus of the SD chapter has been to create meaningful connections with members while also preparing them for a professional career. Our client wants to have a website that can convey that aspect of SASE to users and make them feel encouraged to join. 
+                                        </p><br>
+                                        <strong>Priorities</strong>
+                                        <ul>
+                                            <li>Clear Information Architecture</li>
+                                            <li>Adding more relevant and up-to-date content to the site</li>
+                                            <li>Have a section featuring upcoming events</li>
+                                            <li>Have a section featuring the projects</li>
+                                            <li>Have a modern and professional overall aesthetic</li>
+                                            <li>Have a page for alumni information and involvement</li>
+                                            <li>A section to recognize officers and link relevant information (their LinkedIn)</li>
+                                        </ul>
+                                        <p>
+                                            <strong>Challenges</strong><br>One challenge we faced while redesigning the website was that our client wants us to put all of their information into the site, but we have to make the site not cluttered. We made a compromise by having lots of white space to separate the long blurbs and removing unnecessary words.</b>
+                                        </p>
+                                        <h4 style="text-align: center;">SASE UCSD Mobile Version</h4>
+                                        <div class="portraitFig">
+                                            <figure>
+                                                <img src="./gifs/SASE_M_Home.gif" alt="SASE Mobile Home Page gif">
+                                                <figcaption>SASE's home page displays a short preview of all of sections of the page.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/SASE_M_About.gif" alt="SASE Mobile About Page gif">
+                                                <figcaption>SASE's about page shows shortened version of SASE's mission statement, information about SASE's intern program, and the team. Each one of the boxes can be clicked on to show more information.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/SASE_M_Events.gif" alt="SASE Mobile Events Page gif">
+                                                <figcaption>SASE's event page displays upcoming events, event highlight, and archived events. Clicking on the event box shows more details. Users can scroll horizontally to show other events.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/SASE_M_Projects.gif" alt="SASE Mobile Projects Page gif">
+                                                <figcaption>SASE's projects page shows a list of current and future SASE projects.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/SASE_M_Partners.gif" alt="SASE Mobile Partners Page gif">
+                                                <figcaption>SASE's partner page shows a pie chart of its member body, the benefits of collaborating with SASE, and past collaborators and the things they did with SASE UCSD.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/SASE_M_Resources.gif" alt="SASE Mobile Resources Page gif">
+                                                <figcaption>SASE's resources page shows a list of job opportunities and external resources. When user clicked the "Read more" button, it redirects the user to the original source or job posting.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <h4 style="text-align: center;">SASE UCSD Desktop Version</h4>
+                                        <div class="landscapeFig">
+                                            <figure>
+                                                <img src="./gifs/SASE_D_Home.gif" alt="SASE Desktop Home Page gif">
+                                                <figcaption>SASE's home page shows a brief overview of all the sections in the website. Clicking on the blue links can direct them to the corresponding page.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/SASE_D_About.gif" alt="SASE Desktop About Page gif">
+                                                <figcaption>SASE's About page shows brief description about the organization, their mission statement, the intern program, and the team member. Clicking on the boxes of the team member gives more information and the board member contact information.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/SASE_D_Events.gif" alt="SASE Desktop Events Page gif">
+                                                <figcaption>SASE's Events page shows a list of their upcoming, highlight, and arhived events. Clicking on the event box displays a modal with more information about the event.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/SASE_D_Projects.gif" alt="SASE Desktop Projects Page gif">
+                                                <figcaption>SASE's Projects page shows a list of current and upcoming projects with brief descriptions and some pictures.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/SASE_D_Partners.gif" alt="SASE Desktop Partners Page gif">
+                                                <figcaption>SASE's Partners page shows SASE's student body composition by major in a pie chart, reasons to work with SASE UCSD, and past collaborators and things they did with SASE UCSD.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/SASE_D_Resources.gif" alt="SASE Desktop Resources Page gif">
+                                                <figcaption>SASE's Resources page shows a list of internships, job opportunities, and external resources. When the blue links are clicked on, the user will be redirected to the company's job posting site.</figcaption>
+                                            </figure>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="thumbnail flex">
-                        <img src="./Images/txr_logo.png" class="icon-portrait" alt="Triton XR Logo">
-                        <div class="overlay">
-                            <h3>Triton XR Website</h3>
+                </div>
+                <!-- Triton XR Redesign -->
+                <div class="col-lg-4 col-sm-6 projectCell">
+                    <button type="button" class="btn btn-primary thumbnail" data-toggle="modal" data-target="#txr">
+                        <img src="./Images/txr_prev.png" alt="HackXR Logo">
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="txr" tabindex="-1" role="dialog" aria-labelledby="txr" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h3>Triton XR Redesign</h3>
+                                <div class="modal-body">
+                                    <article>
+                                        <a href="https://github.com/TritonXR/Website">Github Repository</a>
+                                        <p class="subheading"><strong>Technologies used:</strong> Bootstrap, jQuery</p>
+                                        <p class="subheading"><strong>Languages used:</strong> HTML, CSS, JavaScript</p>
+                                        <p>
+                                            <strong>Overview</strong><br>Triton XR website is a static web page created for the organization Triton XR. It have all of the latest information about the organization Triton XR, its officer team, events, 
+                                            and other Triton XR relevant information. Because Triton XR was rebranded from VR Club at UCSD, the website visuals and contents needed update. I took initiative to work with Triton XR's 2018-2019 Branding 
+                                            Committee to update the website's user interface and contents. 
+                                        </p>
+                                        <p>
+                                            <strong>Challenge</strong><br>The challenge I faced while working on this website was the lack of knowledge on how the website was hosted and where was it deployed as the previous web team did not left any documentations, and nobody in the officer 
+                                            team worked on the website. I asked around and experimented with the website before I figured out how everything works. After that, I created a documentation about everything that have to do with the Triton XR website.
+                                        </p>
+                                        <div class="landscapeFig">
+                                                <figure>
+                                                    <img src="./Images/txr_home.png" alt="Triton XR home section">
+                                                    <figcaption>Triton XR's landing page</figcaption>
+                                                </figure>
+                                                <figure>
+                                                    <img src="./Images/txr_home2.png" alt="Triton XR home 2nd section">
+                                                    <figcaption>This part of the home page informs visitor what the organization is about as well as some resources and contacts to the organization.</figcaption>
+                                                </figure>
+                                                <figure>
+                                                    <img src="./Images/txr_event_calendar.png" alt="Triton XR event calendar">
+                                                    <figcaption>The event calendar is connected with the Triton XR public calendar so all publicized events are displayed on it.</figcaption>
+                                                </figure>
+                                                <figure>
+                                                    <img src="./Images/txr_about.png" alt="Triton XR about page">
+                                                    <figcaption>This page displays all of the Triton XR officers for the academic year of 2018-2019.</figcaption>
+                                                </figure>
+                                                <figure>
+                                                    <img src="./Images/txr_projects.png" alt="Triton XR projects page">
+                                                    <figcaption>All of Triton XR's project guidelines and information are displayed here.</figcaption>
+                                                </figure>
+                                                <figure>
+                                                    <img src="./Images/txr_news.png" alt="Triton XR news page">
+                                                    <figcaption>All of the news articles about Triton XR are listed in this page.</figcaption>
+                                                </figure>
+                                            </div>
+                                    </article>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="thumbnail flex">
-                        <img src="./Images/tritoned.png" class="icon-landscape" alt="TritonEd picture">
-                        <div class="overlay">
-                            <h3>TritonEd</h3>
+                </div>
+                <!-- TritonEd Redesign -->
+                <div class="col-lg-4 col-sm-6 projectCell">
+                    <button type="button" class="btn btn-primary thumbnail" data-toggle="modal" data-target="#ted">
+                        <img src="./Images/ted_prev.png" alt="TritonEd Redesign Preview">
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="ted" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h3>TritonEd Redesign</h3>
+                                <div class="modal-body">
+                                    <article>
+                                        <a href="https://xd.adobe.com/view/f8e0061b-eae2-40ad-5871-8f70f7e522d5-8ed1/?hints=off">TritonEd Redesign One</a><br>
+                                        <a href="https://projects.invisionapp.com/share/8SPJ3HBMDXW#/screens/335940817">TritonEd Redesign Two</a><br>
+                                        <a href="https://docs.google.com/document/d/1ICLwwXbr3UL-7oIdtUw9UTkFg4uzHgXO98XdnBdQyII/edit?usp=sharing">Design Documentation</a>
+                                        <p>
+                                            <strong>Overview</strong><br>
+                                            In my Human-Computer Interaction class, my group redesigned the mobile version of TritonEd, UC San Diego's Learning 
+                                            Management System. After the first round of user testing to uncover the usability errors, we chose to focus on the 
+                                            navigation process in the homepage to fix several of the usability errors. We came up with four redesigns on paper, 
+                                            then use InVision and Adobe XD to create two final redesigns. In our second round of user testing, users prefer our
+                                            redesign because of its simplicity and ease of use. We tried to introduce several new features or ways of interaction,
+                                            but it deviated too much from the original website. Users either were unaware of these new features or were confused by 
+                                            them. Overall, we learned that despite how unoptimized the original site is for mobile, students adopted to the design 
+                                            and got around the design flaws.
+                                        </p>
+                                        <h4 style="text-align: center;">TritonEd Redesign One</h4>
+                                        <div class="portraitFig">
+                                            <figure>
+                                                <img src="./gifs/TritonEd1_Home.gif" alt="TritonEd Home Page gif">
+                                                <figcaption>Because students only ever use the application to check their classes and announcements, we decided to only have those features in the home page. We utilized horizontal scrolling to navigate between different quarters. In addition, all of the important features are hidden away in the hamburger menu or the profile button.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/TritonEd1_Course1.gif" alt="TritonEd Course Page gif">
+                                                <figcaption>All of the main features of the courses in TritonEd is included in the TritonEd course home page. Students can navigate between their classes by swiping left and right.</figcaption>
+                                            </figure>
+                                        </div>
+                                        <h4 style="text-align: center;">TritonEd Redesign Two</h4>
+                                        <div class="portraitFig">
+                                            <figure>
+                                                <img src="./gifs/TritonEd2_Home.gif" alt="TritonEd Home Page gif">
+                                                <figcaption>All of the student's courses are displayed with the top one being the current course. The top three announcements for each course is displayed right beneath each course box. All of the major features are in the navigation controller on top, while other less used features are hidden in the hamburger menu.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/TritonEd2_Announcements.gif" alt="TritonEd Announcements Page gif">
+                                                <figcaption>The Announcement section contains a list of announcements from the student's courses.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./gifs/TritonEd2_Courses.gif" alt="TritonEd Courses Page gif">
+                                                <figcaption>The Course section displays the first of the student's course by default, but the student can tap on the drop down to switch between courses. The bottom boxes also displays the different sections of the course.</figcaption>
+                                            </figure>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="thumbnail flex">
-                        <img src="./Images/Clostat_logo.png" class="icon-portrait" alt="Clostat Logo">
-                        <div class="overlay">
-                            <h3>Clostat</h3>
+                </div>
+                <!-- Clostat -->
+                <div class="col-lg-4 col-sm-6 projectCell">
+                    <button type="button" class="btn btn-primary thumbnail" data-toggle="modal" data-target="#clostat">
+                        <img src="./Images/clostat_prev.png" alt="Clostat Preview">
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="clostat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h3>Clostat</h3>
+                                <div class="modal-body">
+                                    <article>
+                                        <a href="https://github.com/inviswings/CloStat">Github Repository</a>
+                                        <p class="subheading"><strong>Technologies used:</strong> Firebase Realtime Database, Node.js, npm, handlebars, jQuery, OpenWeatherMap API</p>
+                                        <p class="subheading"><strong>Languages used:</strong> HTML, CSS, JavaScript</p>
+                                        <p>
+                                            <strong>Overview</strong><br>CloStat provides users with clothing recommendations based on the up-to-date weather information. It is a 
+                                            virtual closet that let the user keeps track of the status of clothing (clean or worn) to allow a more
+                                            accurate recommendation. It is created using Firebase Realtime Database, Node.js, npm, handlebars, OpenWeatherMap API.
+                                        </p>
+                                        <h3>BrainStorm</h3>
+                                        <img src="./Images/Clostat_Storyboard.jpg" alt="Clostat Storyboard image">
+                                        <p>
+                                            In my Human-Computer Interaction (HCI) Programming  Studio class (Cogs 121), my group brainstormed ideads
+                                            about what mobile web application to make that centered around the theme of <em>interacting with real world data</em>.
+                                            We all liked the idea of having something to narrow down on what clothes we should wear from day-to-day because 
+                                            California's ever-changing weather and temperature made it hard for us to wear something we like while still 
+                                            enjoying the outdoor.
+                                        </p>
+                                        <h3>Paper Prototype</h3>
+                                        <img src="./Images/Clostat_prototype.png" alt="Clostat prototype image">
+                                        <p>
+                                            My group used paper prototype to design what would later be called Clostat. We mapped out each of the screens that will be 
+                                            displayed when the users click different buttons on the web app. In additon, we also mapped out the different ways the user
+                                            might interact with the app and think of ways to get around any user problems.
+                                        </p>
+                                        <h3>The Application</h3>
+                                        <p>
+                                            For this project, I implemented user authentication using Firebase Authentication, implemented the OpenWeatherMap API, designed and implemented Firebase Realtime Database, and helped designed the application.
+                                        </p>
+                                        <p>
+                                            Some challenges I faced while working on this project was implementing Firebase Realtime Database as my whole group has never used it before. I also tried to optimize the design of the database to decrease the 
+                                            time the application need to retrieve data. This was my second time developing in web, so there were still a lot of things that I knew very little about, such as node.js, express, and npm. I did some research
+                                            to get some general ideas of them and their basic usage.
+                                        </p>
+                                        <div class="portraitFig">
+                                            <figure>
+                                                <img src="./Images/Clostat_login.png" alt="Clostat login page">
+                                                <figcaption>Clostat's login page.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Clostat_home.png" alt="Clostat home page">
+                                                <figcaption>Clostat home page showing the current location or a custom location's weather as well as some recommended clothings.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Clostat_closet.png" alt="Clostat closet page">
+                                                <figcaption>The user's virtual closet containing all of his or her dirty/clean top/bottoms.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Clostat_rec.png" alt="Clostat recommendations page">
+                                                <figcaption>The recommended clothes for the user depending on the current temperature.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Clostat_stat.png" alt="Clostat statistics page">
+                                                <figcaption>A bar chart displaying the user's clothing wearage for the month.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Clostat_add.png" alt="Clostat add page">
+                                                <figcaption>This page lets the user to add clothes into his or her virtual closet.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Clostat_laundry.png" alt="Clostat laundry page">
+                                                <figcaption>This page displays all of user's worn clothing, and user can mark the cloth(es) to "clean" them.</figcaption>
+                                            </figure>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="thumbnail flex">
-                        <img src="./Images/Markit_logo.png" class="icon-landscape" alt="Markit Logo">
-                        <div class="overlay">
-                            <h3>MarkIt</h3>
+                </div>
+                <!-- MarkIt -->
+                <div class="col-lg-4 col-sm-6 projectCell">
+                    <button type="button" class="btn btn-primary thumbnail" data-toggle="modal" data-target="#markit">
+                        <img src="./Images/markit_prev.png" alt="MarkIt Preview">
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="markit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h3>MarkIt</h3>
+                                <div class="modal-body">
+                                    <article>
+                                        <a href="https://github.com/Uye121/Markit">Github Repository</a><br>
+                                        <a href="https://docs.google.com/spreadsheets/d/1XJ_6hCmvGXxNleRh7i4zCY_Ec3BZIqn87z5jCZqiA_U/edit?usp=sharing">Development Plan</a>
+                                        <p class="subheading"><strong>Technologies used:</strong> Node.js, npm, handlebars, jQuery, Google Analytics, Quagga API, bootstrap</p>
+                                        <p class="subheading"><strong>Languages used:</strong> HTML, CSS, JavaScript</p>
+                                        <p>
+                                            <strong>Overview</strong><br>Markit allow users to scan barcodes to compare the user reviews on store products to make a wiser
+                                            purchase. Markit is designed to combat the struggle of struggling to find the best quality product
+                                            from the massive amount of choices offered to the consumer in store. It brings the online ecommerce
+                                            feature of reviewing products to the physical world. 
+                                        </p>
+                                        <h3>BrainStorm</h3>
+                                        <img src="./Images/Markit_Storyboard.png" alt="Markit storyboard image">
+                                        <p>
+                                            In my HCI Interaction Design class (Cogs 120), my group brainstormed ideas about what mobile web application
+                                            we can make that deals with everyday problems and satisfy the theme of <strong>Environmental Interaction</strong>, and we all thought of
+                                            the problem we had while grocery shopping. As we walked down the aisle, the sheer amount of choices overwhelmed us. We thought
+                                            of the different ways we shopped and decided to integrate the online shopping experience with real world grocery shopping.
+                                        </p>
+                                        <h3>Paper Prototype</h3>
+                                        <img src="./Images/Markit_paper_prototype.png" alt="Markit paper prototype image">
+                                        <p>
+                                            We first used paper prototype to mapped out the most essential features of the app.
+                                        </p>
+                                        <img src="./Images/Markit_InVision_prototype.png" alt="Markit InVisionn prototype image">
+                                        <p>
+                                            Next, we used InVision to improve our paper prototype design and made it an interactive app to further test how users would 
+                                            interact when using the app. Last, we built the mobile web app <a href="https://markit-sum.herokuapp.com/index">MarkIt</a> 
+                                            using HTML, CSS, JavaScript, Express, Node.js, and Quagga API.
+                                        </p>
+                                        <h3>The Application</h3>
+                                        <p>
+                                            For this project, I set up version control, created the HTML skeleton for the application, delegated tasks to group memebers, 
+                                            implemented the Quagga API to detect and scan barcdoes, implemented Google Analytics to perform A/B testing, and implemented 
+                                            search feature to search for items.
+                                        </p>
+                                        <p>
+                                            Some challenges I faced while working on this project was trying to find a good API that can detect and scan barcodes easily. I 
+                                            also had to do some research into barcodes as I was not aware of the different types of barcodes out there. It was also my first time
+                                            doing web development, so I knew next to nothing about HTML, CSS, and Javascript, much less web frameworks and libraries. I had to learn
+                                            the basics of HTML, CSS, and Javascript on my own, while delegating tasks to my group members, who also had no experience in web development.
+                                        </p>
+                                        <div class="portraitFig">
+                                            <figure>
+                                                <img src="./Images/Markit_loading.png" alt="Markit loading page">
+                                                <figcaption>Markit's loading animation screen.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Markit_home.png" alt="Markit home page">
+                                                <figcaption>Markit's homepage let user to look up grocery items and related items by searching keywords or scanning the barcode.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Markit_tap_scan.png" alt="Markit tap-to-scan page">
+                                                <figcaption>This page lets the user to tap on the button to scan barcodes if they choose to.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Markit_scan.png" alt="Markit scan page">
+                                                <figcaption>The user needs to give permission to the application for it to access the camera to scan for barcodes.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Markit_search.png" alt="Markit search page">
+                                                <figcaption>Users can search up keywords or item names here to find related items and their details.</figcaption>
+                                            </figure>
+                                            <figure>
+                                                <img src="./Images/Markit_details.png" alt="Markit details page">
+                                                <figcaption>After the users searched for the item, they can tap on the pictures of the items to expand for more details as shown above.</figcaption>
+                                            </figure>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="modal-content">
-                <section class="proj">
-                    <span onclick="closeModal(0)">&times;</span>
-                    <h2><a href="http://hackxr.io">HackXR 2019</a></h2>
-                    <article>
-                        <a href="https://github.com/TritonXR/hackXRsite">Github Repository</a>
-                        <h4>Technologies used: Bootstrap, jQuery</h4>
-                        <h4>Languages used: HTML, CSS, JavaScript</h4>
-                        <p>
-                            <b>Overview</b><br>HackXR 2019 is a responsive static website built using Bootstrap for HackXR, Triton XR's 36 hours Extended Reality Hackathon. The website was built with the purpose of informing
-                            and updating visitors about the event, as well as links to register and to sign up as volunteer. I collaborated with Triton XR's Branding Committee and went through several iterations 
-                            of redesign using Adobe XD, while asking feedbacks from colleagues, friends, and working professionals in the industry.
-                        </p>
-                        <p>
-                            The layout of the site itself was built using Bootstrap, HTML, and CSS. The interactions and features was created using JavaScript and jQuery.
-                        </p>
-                        <p>
-                            <b>Challenge</b><br>I did not know how to deploy the website as there was no documentation to help me, and the previous Triton XR web team did not remember how they deploy the website. I spent a lot
-                            of time looking up Github pages and custom domains before I figured out how to deploy the website using a custom domain. Another challenge I faced is that I only had few weeks to get website up 
-                            because I need to get the website up before we advertise the hackathon so that people can find out more about the event. The last challenge I faced was deciding whether to use Bootstrap or not. For 
-                            an event website of this scale, bootstrap would not impede the site's performance much, and bootstrap is built for mobile-first design. However, bootstrap websites are very generic and promotes messy 
-                            markup as it encourages the use of classes and divs rather than some of the HTML tags. I chose to use bootstrap to help with the implementation as I did not have the time to make a truly responsive
-                            website with the time given.
-                        </p>
-                        <div class="flexbox img_border">
-                            <figure style="max-width: 80%;">
-                                <img src="./Images/hackxr_home.png" alt="HackXR home section">
-                                <figcaption>HackXR's landing page</figcaption>
-                            </figure>
-                            <figure style="max-width: 80%;">
-                                <img src="./Images/hackxr_about.png" alt="HackXR about section">
-                                <figcaption>This section of the page informs user what the hackathon is about and what Virtual, Augmented, and Extended Reality is.</figcaption>
-                            </figure>
-                            <figure style="max-width: 80%;">
-                                <img src="./Images/hackxr_schedule_faq.png" alt="HackXR schedule and FAQ section">
-                                <figcaption>This section will display the HackXR schedule once it is finalized, and the FAQ section provides user with answers to frequently asked questions.</figcaption>
-                            </figure>
-                            <figure style="max-width: 80%;">
-                                <img src="./Images/hackxr_sponsor.png" alt="HackXR sponsor section">
-                                <figcaption>This section contains all of the current sponsors and partners for HackXR and will be updated as more sponsors and partners are finalized.</figcaption>
-                            </figure>
-                            <figure style="max-width: 80%;">
-                                <img src="./Images/hackxr_contact.png" alt="HackXR contact section">
-                                <figcaption>This section contains icons for the relevant resources for the hackathon.</figcaption>
-                            </figure>
-                        </div>
-                    </article>
-                </section>
-                <section class="proj">
-                    <span onclick="closeModal(1)">&times;</span>
-                    <h2>SASE Website Redesign</h2>
-                    <article>
-                        <a href="https://www.figma.com/proto/vEWMaH9VcdBPBvVAdreFdh/COGS187B-Mobile-Prototype-Final?node-id=0%3A1&viewport=257%2C226%2C0.157939&scaling=scale-down">Interactive Prototype (Mobile)</a><br>
-                        <a href="https://www.figma.com/proto/XMuxuuNwiDRJAKhkd0xniP/COGS187B-Desktop-Prototype-Final?node-id=0%3A1&viewport=463%2C299%2C0.106126&scaling=scale-down">Interactive Prototype (Desktop)</a>
-                        <p>
-                            <b>Overview<br></b>Society of Asian Scientists and Engineers (SASE) at UCSD is part of a national organization founded in 2003 in East Coast to add diversity. SASE at UCSD won awards almost every year and is very strong on the outside.Their current biggest event is Dining with Professionals (DWP), where they invite companies from San Diego area to come dine with UC San Diego students and talk about their work.
-                        </p>
-                        <p>
-                            <b>Goal<br></b>The main focus of the SD chapter has been to create meaningful connections with members while also preparing them for a professional career. Our client wants to have a website that can convey that aspect of SASE to users and make them feel encouraged to join. 
-                        </p><br>
-                        <b>Priorities</b>
-                        <ul>
-                            <li>Clear Information Architecture</li>
-                            <li>Adding more relevant and up-to-date content to the site</li>
-                            <li>Have a section featuring upcoming events</li>
-                            <li>Have a section featuring the projects</li>
-                            <li>Have a modern and professional overall aesthetic</li>
-                            <li>Have a page for alumni information and involvement</li>
-                            <li>A section to recognize officers and link relevant information (their LinkedIn)</li>
-                        </ul>
-                        <p>
-                            <b>Challenges<br></b>One challenge we faced while redesigning the website was that our client wants us to put all of their information into the site, but we have to make the site not cluttered. We made a compromise by having lots of white space to separate the long blurbs and removing unnecessary words.</b>
-                        </p>
-                        <h4 style="text-align: center;">SASE UCSD Mobile Version</h4>
-                        <div class="flexbox">
-                            <figure>
-                                <img src="./gifs/SASE_M_Home.gif" alt="SASE Mobile Home Page gif">
-                                <figcaption>SASE's home page displays a short preview of all of sections of the page.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./gifs/SASE_M_About.gif" alt="SASE Mobile About Page gif">
-                                <figcaption>SASE's about page shows shortened version of SASE's mission statement, information about SASE's intern program, and the team. Each one of the boxes can be clicked on to show more information.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./gifs/SASE_M_Events.gif" alt="SASE Mobile Events Page gif">
-                                <figcaption>SASE's event page displays upcoming events, event highlight, and archived events. Clicking on the event box shows more details. Users can scroll horizontally to show other events.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./gifs/SASE_M_Projects.gif" alt="SASE Mobile Projects Page gif">
-                                <figcaption>SASE's projects page shows a list of current and future SASE projects.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./gifs/SASE_M_Partners.gif" alt="SASE Mobile Partners Page gif">
-                                <figcaption>SASE's partner page shows a pie chart of its member body, the benefits of collaborating with SASE, and past collaborators and the things they did with SASE UCSD.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./gifs/SASE_M_Resources.gif" alt="SASE Mobile Resources Page gif">
-                                <figcaption>SASE's resources page shows a list of job opportunities and external resources. When user clicked the "Read more" button, it redirects the user to the original source or job posting.</figcaption>
-                            </figure>
-                        </div>
-                        <h4 style="text-align: center;">SASE UCSD Desktop Version</h4>
-                        <div class="flexbox img_border">
-                            <figure style="max-width: 80%;">
-                                <img src="./gifs/SASE_D_Home.gif" alt="SASE Desktop Home Page gif">
-                                <figcaption>SASE's home page shows a brief overview of all the sections in the website. Clicking on the blue links can direct them to the corresponding page.</figcaption>
-                            </figure>
-                            <figure style="max-width: 80%;">
-                                <img src="./gifs/SASE_D_About.gif" alt="SASE Desktop About Page gif">
-                                <figcaption>SASE's About page shows brief description about the organization, their mission statement, the intern program, and the team member. Clicking on the boxes of the team member gives more information and the board member contact information.</figcaption>
-                            </figure>
-                            <figure style="max-width: 80%;">
-                                <img src="./gifs/SASE_D_Events.gif" alt="SASE Desktop Events Page gif">
-                                <figcaption>SASE's Events page shows a list of their upcoming, highlight, and arhived events. Clicking on the event box displays a modal with more information about the event.</figcaption>
-                            </figure>
-                            <figure style="max-width: 80%;">
-                                <img src="./gifs/SASE_D_Projects.gif" alt="SASE Desktop Projects Page gif">
-                                <figcaption>SASE's Projects page shows a list of current and upcoming projects with brief descriptions and some pictures.</figcaption>
-                            </figure>
-                            <figure style="max-width: 80%;">
-                                <img src="./gifs/SASE_D_Partners.gif" alt="SASE Desktop Partners Page gif">
-                                <figcaption>SASE's Partners page shows SASE's student body composition by major in a pie chart, reasons to work with SASE UCSD, and past collaborators and things they did with SASE UCSD.</figcaption>
-                            </figure>
-                            <figure style="max-width: 80%;">
-                                <img src="./gifs/SASE_D_Resources.gif" alt="SASE Desktop Resources Page gif">
-                                <figcaption>SASE's Resources page shows a list of internships, job opportunities, and external resources. When the blue links are clicked on, the user will be redirected to the company's job posting site.</figcaption>
-                            </figure>
-                        </div>
-                    </article>
-                </section>
-                <section class="proj">
-                    <span onclick="closeModal(2)">&times;</span>
-                    <h2><a href="http://tritonxr.ucsd.edu">Triton XR Website</a></h2>
-                    <article>
-                        <a href="https://github.com/TritonXR/Website">Github Repository</a>
-                        <h4>Technologies used: Bootstrap, jQuery</h4>
-                        <h4>Languages used: HTML, CSS, JavaScript</h4>
-                        <p>
-                            Triton XR website is a static web page created for the organization Triton XR. It have all of the latest information about the organization Triton XR, its officer team, events, 
-                            and other Triton XR relevant information. Because Triton XR was rebranded from VR Club at UCSD, the website visuals and contents needed update. I took initiative to work with Triton XR's 2018-2019 Branding 
-                            Committee to update the website's user interface and contents. 
-                        </p>
-                        <p>
-                            The challenge I faced while working on this website was the lack of knowledge on how the website was hosted and where was it deployed as the previous web team did not left any documentations, and nobody in the officer 
-                            team worked on the website. I asked around and experimented with the website before I figured out how everything works. After that, I created a documentation about everything that have to do with the Triton XR website.
-                        </p>
-                        <div class="flexbox img_border">
-                                <figure style="max-width: 80%;">
-                                    <img src="./Images/txr_home.png" alt="Triton XR home section">
-                                    <figcaption>Triton XR's landing page</figcaption>
-                                </figure>
-                                <figure style="max-width: 80%;">
-                                    <img src="./Images/txr_home2.png" alt="Triton XR home 2nd section">
-                                    <figcaption>This part of the home page informs visitor what the organization is about as well as some resources and contacts to the organization.</figcaption>
-                                </figure>
-                                <figure style="max-width: 80%;">
-                                    <img src="./Images/txr_event_calendar.png" alt="Triton XR event calendar">
-                                    <figcaption>The event calendar is connected with the Triton XR public calendar so all publicized events are displayed on it.</figcaption>
-                                </figure>
-                                <figure style="max-width: 80%;">
-                                    <img src="./Images/txr_about.png" alt="Triton XR about page">
-                                    <figcaption>This page displays all of the Triton XR officers for the academic year of 2018-2019.</figcaption>
-                                </figure>
-                                <figure style="max-width: 80%;">
-                                    <img src="./Images/txr_projects.png" alt="Triton XR projects page">
-                                    <figcaption>All of Triton XR's project guidelines and information are displayed here.</figcaption>
-                                </figure>
-                                <figure style="max-width: 80%;">
-                                    <img src="./Images/txr_news.png" alt="Triton XR news page">
-                                    <figcaption>All of the news articles about Triton XR are listed in this page.</figcaption>
-                                </figure>
-                            </div>
-                    </article>
-                </section>
-                <section class="proj">
-                    <span onclick="closeModal(3)">&times;</span>
-                    <h2>TritonEd Redesign</h2>
-                    <article>
-                        <a href="https://xd.adobe.com/view/f8e0061b-eae2-40ad-5871-8f70f7e522d5-8ed1/?hints=off">TritonEd Redesign One</a><br>
-                        <a href="https://projects.invisionapp.com/share/8SPJ3HBMDXW#/screens/335940817">TritonEd Redesign Two</a><br>
-                        <a href="https://docs.google.com/document/d/1ICLwwXbr3UL-7oIdtUw9UTkFg4uzHgXO98XdnBdQyII/edit?usp=sharing">Design Documentation</a>
-                        <p>
-                            In my Human-Computer Interaction class, my group redesigned the mobile version of TritonEd, UC San Diego's Learning 
-                            Management System. After the first round of user testing to uncover the usability errors, we chose to focus on the 
-                            navigation process in the homepage to fix several of the usability errors. We came up with four redesigns on paper, 
-                            then use InVision and Adobe XD to create two final redesigns. In our second round of user testing, users prefer our
-                            redesign because of its simplicity and ease of use. We tried to introduce several new features or ways of interaction,
-                            but it deviated too much from the original website. Users either were unaware of these new features or were confused by 
-                            them. Overall, we learned that despite how unoptimized the original site is for mobile, students adopted to the design 
-                            and got around the design flaws.
-                        </p>
-                        <h4 style="text-align: center;">TritonEd Redesign One</h4>
-                        <div class="flexbox img_border">
-                            <figure>
-                                <img src="./gifs/TritonEd1_Home.gif" alt="TritonEd Home Page gif">
-                                <figcaption>Because students only ever use the application to check their classes and announcements, we decided to only have those features in the home page. We utilized horizontal scrolling to navigate between different quarters. In addition, all of the important features are hidden away in the hamburger menu or the profile button.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./gifs/TritonEd1_Course1.gif" alt="TritonEd Course Page gif">
-                                <figcaption>All of the main features of the courses in TritonEd is included in the TritonEd course home page. Students can navigate between their classes by swiping left and right.</figcaption>
-                            </figure>
-                        </div>
-                        <h4 style="text-align: center;">TritonEd Redesign Two</h4>
-                        <div class="flexbox img_border">
-                            <figure>
-                                <img src="./gifs/TritonEd2_Home.gif" alt="TritonEd Home Page gif">
-                                <figcaption>All of the student's courses are displayed with the top one being the current course. The top three announcements for each course is displayed right beneath each course box. All of the major features are in the navigation controller on top, while other less used features are hidden in the hamburger menu.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./gifs/TritonEd2_Announcements.gif" alt="TritonEd Announcements Page gif">
-                                <figcaption>The Announcement section contains a list of announcements from the student's courses.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./gifs/TritonEd2_Courses.gif" alt="TritonEd Courses Page gif">
-                                <figcaption>The Course section displays the first of the student's course by default, but the student can tap on the drop down to switch between courses. The bottom boxes also displays the different sections of the course.</figcaption>
-                            </figure>
-                        </div>
-                    </article>
-                </section>
-                <section class="proj">
-                    <span onclick="closeModal(4)">&times;</span>
-                    <h2>CloStat</h2>
-                    <article>
-                        <a href="https://github.com/inviswings/CloStat">Github Repository</a>
-                        <h4>Technologies used: Firebase Realtime Database, Node.js, npm, handlebars, jQuery, OpenWeatherMap API</h4>
-                        <h4>Languages used: HTML, CSS, JavaScript</h4>
-                        <p>
-                            CloStat provides users with clothing recommendations based on the up-to-date weather information. It is a 
-                            virtual closet that let the user keeps track of the status of clothing (clean or worn) to allow a more
-                            accurate recommendation. It is created using Firebase Realtime Database, Node.js, npm, handlebars, OpenWeatherMap API.
-                        </p>
-                        <h3>BrainStorm</h3>
-                        <img src="./Images/Clostat_Storyboard.jpg" alt="Clostat Storyboard image">
-                        <p>
-                            In my Human-Computer Interaction (HCI) Programming  Studio class (Cogs 121), my group brainstormed ideads
-                            about what mobile web application to make that centered around the theme of <b>interacting with real world data</b>.
-                            We all liked the idea of having something to narrow down on what clothes we should wear from day-to-day because 
-                            California's ever-changing weather and temperature made it hard for us to wear something we like while still 
-                            enjoying the outdoor.
-                        </p>
-                        <h3>Paper Prototype</h3>
-                        <img src="./Images/Clostat_prototype.png" alt="Clostat prototype image">
-                        <p>
-                            My group used paper prototype to design what would later be called Clostat. We mapped out each of the screens that will be 
-                            displayed when the users click different buttons on the web app. In additon, we also mapped out the different ways the user
-                            might interact with the app and think of ways to get around any user problems.
-                        </p>
-                        <h3>The Application</h3>
-                        <p>
-                            For this project, I implemented user authentication using Firebase Authentication, implemented the OpenWeatherMap API, designed and implemented Firebase Realtime Database, and helped designed the application.
-                        </p>
-                        <p>
-                            Some challenges I faced while working on this project was implementing Firebase Realtime Database as my whole group has never used it before. I also tried to optimize the design of the database to decrease the 
-                            time the application need to retrieve data. This was my second time developing in web, so there were still a lot of things that I knew very little about, such as node.js, express, and npm. I did some research
-                            to get some general ideas of them and their basic usage.
-                        </p>
-                        <div class="flexbox">
-                            <figure>
-                                <img src="./Images/Clostat_login.png" alt="Clostat login page">
-                                <figcaption>Clostat's login page.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Clostat_home.png" alt="Clostat home page">
-                                <figcaption>Clostat home page showing the current location or a custom location's weather as well as some recommended clothings.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Clostat_closet.png" alt="Clostat closet page">
-                                <figcaption>The user's virtual closet containing all of his or her dirty/clean top/bottoms.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Clostat_rec.png" alt="Clostat recommendations page">
-                                <figcaption>The recommended clothes for the user depending on the current temperature.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Clostat_stat.png" alt="Clostat statistics page">
-                                <figcaption>A bar chart displaying the user's clothing wearage for the month.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Clostat_add.png" alt="Clostat add page">
-                                <figcaption>This page lets the user to add clothes into his or her virtual closet.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Clostat_laundry.png" alt="Clostat laundry page">
-                                <figcaption>This page displays all of user's worn clothing, and user can mark the cloth(es) to "clean" them.</figcaption>
-                            </figure>
-                        </div>
-                    </article>
-                </section>
-                <section class="proj">
-                    <span onclick="closeModal(5)">&times;</span>
-                    <h2>Markit</h2>
-                    <article>
-                        <a href="https://github.com/Uye121/Markit">Github Repository</a><br>
-                        <a href="https://docs.google.com/spreadsheets/d/1XJ_6hCmvGXxNleRh7i4zCY_Ec3BZIqn87z5jCZqiA_U/edit?usp=sharing">Development Plan</a>
-                        <h4>Technologies used: Node.js, npm, handlebars, jQuery, Google Analytics, Quagga API, bootstrap</h4>
-                        <h4>Languages used: HTML, CSS, JavaScript</h4>
-                        <p>
-                            Markit allow users to scan barcodes to compare the user reviews on store products to make a wiser
-                            purchase. Markit is designed to combat the struggle of struggling to find the best quality product
-                            from the massive amount of choices offered to the consumer in store. It brings the online ecommerce
-                            feature of reviewing products to the physical world. 
-                        </p>
-                        <h3>BrainStorm</h3>
-                        <img src="./Images/Markit_Storyboard.png" alt="Markit storyboard image">
-                        <p>
-                            In my HCI Interaction Design class (Cogs 120), my group brainstormed ideas about what mobile web application
-                            we can make that deals with everyday problems and satisfy the theme of <b>Environmental Interaction</b>, and we all thought of
-                            the problem we had while grocery shopping. As we walked down the aisle, the sheer amount of choices overwhelmed us. We thought
-                            of the different ways we shopped and decided to integrate the online shopping experience with real world grocery shopping.
-                        </p>
-                        <h3>Paper Prototype</h3>
-                        <img src="./Images/Markit_paper_prototype.png" alt="Markit paper prototype image">
-                        <p>
-                            We first used paper prototype to mapped out the most essential features of the app.
-                        </p>
-                        <img src="./Images/Markit_InVision_prototype.png" alt="Markit InVisionn prototype image">
-                        <p>
-                            Next, we used InVision to improve our paper prototype design and made it an interactive app to further test how users would 
-                            interact when using the app. Last, we built the mobile web app <a href="https://markit-sum.herokuapp.com/index">MarkIt</a> 
-                            using HTML, CSS, JavaScript, Express, Node.js, and Quagga API.
-                        </p>
-                        <h3>The Application</h3>
-                        <p>
-                            For this project, I set up version control, created the HTML skeleton for the application, delegated tasks to group memebers, 
-                            implemented the Quagga API to detect and scan barcdoes, implemented Google Analytics to perform A/B testing, and implemented 
-                            search feature to search for items.
-                        </p>
-                        <p>
-                            Some challenges I faced while working on this project was trying to find a good API that can detect and scan barcodes easily. I 
-                            also had to do some research into barcodes as I was not aware of the different types of barcodes out there. It was also my first time
-                            doing web development, so I knew next to nothing about HTML, CSS, and Javascript, much less web frameworks and libraries. I had to learn
-                            the basics of HTML, CSS, and Javascript on my own, while delegating tasks to my group members, who also had no experience in web development.
-                        </p>
-                        <div class="flexbox">
-                            <figure>
-                                <img src="./Images/Markit_loading.png" alt="Markit loading page">
-                                <figcaption>Markit's loading animation screen.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Markit_home.png" alt="Markit home page">
-                                <figcaption>Markit's homepage let user to look up grocery items and related items by searching keywords or scanning the barcode.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Markit_tap_scan.png" alt="Markit tap-to-scan page">
-                                <figcaption>This page lets the user to tap on the button to scan barcodes if they choose to.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Markit_scan.png" alt="Markit scan page">
-                                <figcaption>The user needs to give permission to the application for it to access the camera to scan for barcodes.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Markit_search.png" alt="Markit search page">
-                                <figcaption>Users can search up keywords or item names here to find related items and their details.</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="./Images/Markit_details.png" alt="Markit details page">
-                                <figcaption>After the users searched for the item, they can tap on the pictures of the items to expand for more details as shown above.</figcaption>
-                            </figure>
-                        </div>
-                    </article>
-                </section>
-            </div>
-        </div>
-        <div class="nav-modal" id="skills">
-            <h1>Programming Languages</h1>
-            <div class="col">
-                <h2>Proficient: </h2><br>
-                <h3>JavaScript<br>Swift<br>Java<br>HTML</h3>
-                <h2>Familiar: </h2><br>
-                <h3>CSS<br>C/C++<br>C#<br>Python</h3>
-            </div>
-            <h1>Tools & Libraries/Framework</h1>
-            <div class="col">
-                <h3>Node.js</h3>
-                <h3>jQuery</h3>
-                <h3>npm</h3>
-                <h3>Git/Github</h3>
-                <h3>Bootstrap</h3>
-                <h3>Heroku</h3>
-                <h3>Sketch</h3>
-                <h3>Adobe XD</h3>
-            </div>
-        </div>
-        <div class="nav-modal" id="resume">
+        </section>
+        <hr>
+        <section id="resume">
+            <h3 class="header">Résumé</h3>
             <embed src="./Files/UlricYe_Resume.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0" width="816" height="1056">
-        </div>
+        </section>
+        <hr>
+        <section id="contact">
+            <h3 class="header">Contact</h3>
+            <form action="mailto:uye@ucsd.edu" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name</label><br>
+                    <input required type="text" name="name" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label><br>
+                    <input required type="text" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label><br>
+                    <input required type="text" name="subject" id="subject" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label><br>
+                    <textarea required name="message" placeholder="Message" rows=6></textarea><br>
+                </div>
+                <div class="col-lg-offset-6 form-group form_submit">
+                    <input type="submit" name="submit" id="submit" value="submit" class="btn btn-default">
+                </div>
+            </form>
+        </section>
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600,900&display=swap" rel="stylesheet">
+        <script src="js/app.js"></script>
     </body>
 </html>
